@@ -51,6 +51,7 @@
 		666EB8331DD98A4500F67EC3 /* uparrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82D1DD98A4500F67EC3 /* uparrow.png */; };
 		666EB8341DD98A4500F67EC3 /* uparrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82E1DD98A4500F67EC3 /* uparrow@2x.png */; };
 		666EB8351DD98A4500F67EC3 /* uparrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82F1DD98A4500F67EC3 /* uparrow@3x.png */; };
+		9298DE261DE3B25600A4598F /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298DE251DE3B25600A4598F /* CameraVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		666EB82D1DD98A4500F67EC3 /* uparrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uparrow.png; sourceTree = "<group>"; };
 		666EB82E1DD98A4500F67EC3 /* uparrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@2x.png"; sourceTree = "<group>"; };
 		666EB82F1DD98A4500F67EC3 /* uparrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@3x.png"; sourceTree = "<group>"; };
+		9298DE251DE3B25600A4598F /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				666EB7B81DD812F100F67EC3 /* HomeScreen.swift */,
+				9298DE251DE3B25600A4598F /* CameraVC.swift */,
 				6636467B1DE26AF400E6D719 /* LogInScreen.swift */,
 				663646801DE2E6CE00E6D719 /* SignUpScreen.swift */,
 			);
@@ -261,7 +264,7 @@
 				TargetAttributes = {
 					666EB7B21DD812F000F67EC3 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = VDQS4882Z8;
+						DevelopmentTeam = P486JETJ9C;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				666EB7B91DD812F100F67EC3 /* HomeScreen.swift in Sources */,
+				9298DE261DE3B25600A4598F /* CameraVC.swift in Sources */,
 				666EB7E61DD94C3400F67EC3 /* PoplurRemote.swift in Sources */,
 				666EB7B71DD812F100F67EC3 /* AppDelegate.swift in Sources */,
 				663646811DE2E6CE00E6D719 /* SignUpScreen.swift in Sources */,
@@ -465,7 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VDQS4882Z8;
+				DEVELOPMENT_TEAM = P486JETJ9C;
 				INFOPLIST_FILE = Poplur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mark-Meritt.Poplur";
@@ -478,7 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VDQS4882Z8;
+				DEVELOPMENT_TEAM = P486JETJ9C;
 				INFOPLIST_FILE = Poplur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mark-Meritt.Poplur";
