@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		663646761DE2539800E6D719 /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 663646751DE2539800E6D719 /* pop.mp3 */; };
+		6636467A1DE25C7B00E6D719 /* popSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 663646791DE25C7B00E6D719 /* popSound.mp3 */; };
+		6636467C1DE26AF400E6D719 /* LogInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636467B1DE26AF400E6D719 /* LogInScreen.swift */; };
+		663646811DE2E6CE00E6D719 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663646801DE2E6CE00E6D719 /* SignUpScreen.swift */; };
+		663646831DE2E9A100E6D719 /* forgotPw.png in Resources */ = {isa = PBXBuildFile; fileRef = 663646821DE2E9A100E6D719 /* forgotPw.png */; };
+		663646861DE2E9B000E6D719 /* forgotPw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 663646841DE2E9B000E6D719 /* forgotPw@2x.png */; };
+		663646871DE2E9B000E6D719 /* forgotPw@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 663646851DE2E9B000E6D719 /* forgotPw@3x.png */; };
+		666EB7B71DD812F100F67EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666EB7B61DD812F100F67EC3 /* AppDelegate.swift */; };
+		666EB7B91DD812F100F67EC3 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666EB7B81DD812F100F67EC3 /* HomeScreen.swift */; };
+		666EB7BC1DD812F100F67EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666EB7BA1DD812F100F67EC3 /* Main.storyboard */; };
+		666EB7BE1DD812F100F67EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666EB7BD1DD812F100F67EC3 /* Assets.xcassets */; };
+		666EB7C11DD812F100F67EC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666EB7BF1DD812F100F67EC3 /* LaunchScreen.storyboard */; };
+		666EB7CE1DD8137A00F67EC3 /* apptist logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB7C81DD8137A00F67EC3 /* apptist logo.png */; };
+		666EB7D81DD84F7000F67EC3 /* Myriad-Pro-Semibold_31650.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 666EB7D61DD84F5900F67EC3 /* Myriad-Pro-Semibold_31650.ttf */; };
+		666EB7D91DD84F7200F67EC3 /* Myriad-Pro-Condensed_31633.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 666EB7D71DD84F5900F67EC3 /* Myriad-Pro-Condensed_31633.ttf */; };
+		666EB7E01DD851A000F67EC3 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666EB7DF1DD851A000F67EC3 /* CircleButton.swift */; };
+		666EB7E41DD94BA600F67EC3 /* PoplurScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666EB7E31DD94BA600F67EC3 /* PoplurScreen.swift */; };
+		666EB7E61DD94C3400F67EC3 /* PoplurRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666EB7E51DD94C3400F67EC3 /* PoplurRemote.swift */; };
+		666EB7F91DD95C7D00F67EC3 /* apptist logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB7EE1DD95C7D00F67EC3 /* apptist logo.png */; };
+		666EB80D1DD9605700F67EC3 /* bitmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB8041DD9605700F67EC3 /* bitmap.png */; };
+		666EB80E1DD9605700F67EC3 /* bitmap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB8051DD9605700F67EC3 /* bitmap@2x.png */; };
+		666EB80F1DD9605700F67EC3 /* bitmap@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB8061DD9605700F67EC3 /* bitmap@3x.png */; };
+		666EB8101DD9605700F67EC3 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB8071DD9605700F67EC3 /* login.png */; };
+		666EB8111DD9605700F67EC3 /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB8081DD9605700F67EC3 /* login@2x.png */; };
+		666EB8121DD9605700F67EC3 /* login@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB8091DD9605700F67EC3 /* login@3x.png */; };
+		666EB8131DD9605700F67EC3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB80A1DD9605700F67EC3 /* logo.png */; };
+		666EB8141DD9605700F67EC3 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB80B1DD9605700F67EC3 /* logo@2x.png */; };
+		666EB8151DD9605700F67EC3 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB80C1DD9605700F67EC3 /* logo@3x.png */; };
+		666EB8171DD966F800F67EC3 /* CustomLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666EB8161DD966F800F67EC3 /* CustomLabels.swift */; };
+		666EB8211DD98A3200F67EC3 /* combinedShape.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB8181DD98A3200F67EC3 /* combinedShape.png */; };
+		666EB8221DD98A3200F67EC3 /* combinedShape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB8191DD98A3200F67EC3 /* combinedShape@2x.png */; };
+		666EB8231DD98A3200F67EC3 /* combinedShape@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB81A1DD98A3200F67EC3 /* combinedShape@3x.png */; };
+		666EB8241DD98A3200F67EC3 /* downarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB81B1DD98A3200F67EC3 /* downarrow.png */; };
+		666EB8251DD98A3200F67EC3 /* downarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB81C1DD98A3200F67EC3 /* downarrow@2x.png */; };
+		666EB8261DD98A3200F67EC3 /* downarrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB81D1DD98A3200F67EC3 /* downarrow@3x.png */; };
+		666EB8271DD98A3200F67EC3 /* leftarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB81E1DD98A3200F67EC3 /* leftarrow.png */; };
+		666EB8281DD98A3200F67EC3 /* leftarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB81F1DD98A3200F67EC3 /* leftarrow@2x.png */; };
+		666EB8291DD98A3200F67EC3 /* leftarrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB8201DD98A3200F67EC3 /* leftarrow@3x.png */; };
+		666EB8301DD98A4500F67EC3 /* rightarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82A1DD98A4500F67EC3 /* rightarrow.png */; };
+		666EB8311DD98A4500F67EC3 /* rightarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82B1DD98A4500F67EC3 /* rightarrow@2x.png */; };
+		666EB8321DD98A4500F67EC3 /* rightarrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82C1DD98A4500F67EC3 /* rightarrow@3x.png */; };
+		666EB8331DD98A4500F67EC3 /* uparrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82D1DD98A4500F67EC3 /* uparrow.png */; };
+		666EB8341DD98A4500F67EC3 /* uparrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82E1DD98A4500F67EC3 /* uparrow@2x.png */; };
+		666EB8351DD98A4500F67EC3 /* uparrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82F1DD98A4500F67EC3 /* uparrow@3x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		663646751DE2539800E6D719 /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
+		663646791DE25C7B00E6D719 /* popSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = popSound.mp3; sourceTree = "<group>"; };
+		6636467B1DE26AF400E6D719 /* LogInScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInScreen.swift; sourceTree = "<group>"; };
+		663646801DE2E6CE00E6D719 /* SignUpScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		663646821DE2E9A100E6D719 /* forgotPw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forgotPw.png; sourceTree = "<group>"; };
+		663646841DE2E9B000E6D719 /* forgotPw@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forgotPw@2x.png"; sourceTree = "<group>"; };
+		663646851DE2E9B000E6D719 /* forgotPw@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forgotPw@3x.png"; sourceTree = "<group>"; };
+		666EB7B31DD812F100F67EC3 /* Poplur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poplur.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		666EB7B61DD812F100F67EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		666EB7B81DD812F100F67EC3 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		666EB7BB1DD812F100F67EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		666EB7BD1DD812F100F67EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		666EB7C01DD812F100F67EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		666EB7C21DD812F100F67EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		666EB7C81DD8137A00F67EC3 /* apptist logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apptist logo.png"; sourceTree = "<group>"; };
+		666EB7D61DD84F5900F67EC3 /* Myriad-Pro-Semibold_31650.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad-Pro-Semibold_31650.ttf"; sourceTree = "<group>"; };
+		666EB7D71DD84F5900F67EC3 /* Myriad-Pro-Condensed_31633.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad-Pro-Condensed_31633.ttf"; sourceTree = "<group>"; };
+		666EB7DF1DD851A000F67EC3 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		666EB7E31DD94BA600F67EC3 /* PoplurScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoplurScreen.swift; sourceTree = "<group>"; };
+		666EB7E51DD94C3400F67EC3 /* PoplurRemote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoplurRemote.swift; sourceTree = "<group>"; };
+		666EB7EE1DD95C7D00F67EC3 /* apptist logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apptist logo.png"; sourceTree = "<group>"; };
+		666EB8041DD9605700F67EC3 /* bitmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bitmap.png; sourceTree = "<group>"; };
+		666EB8051DD9605700F67EC3 /* bitmap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bitmap@2x.png"; sourceTree = "<group>"; };
+		666EB8061DD9605700F67EC3 /* bitmap@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bitmap@3x.png"; sourceTree = "<group>"; };
+		666EB8071DD9605700F67EC3 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		666EB8081DD9605700F67EC3 /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
+		666EB8091DD9605700F67EC3 /* login@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@3x.png"; sourceTree = "<group>"; };
+		666EB80A1DD9605700F67EC3 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		666EB80B1DD9605700F67EC3 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		666EB80C1DD9605700F67EC3 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
+		666EB8161DD966F800F67EC3 /* CustomLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabels.swift; sourceTree = "<group>"; };
+		666EB8181DD98A3200F67EC3 /* combinedShape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = combinedShape.png; sourceTree = "<group>"; };
+		666EB8191DD98A3200F67EC3 /* combinedShape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "combinedShape@2x.png"; sourceTree = "<group>"; };
+		666EB81A1DD98A3200F67EC3 /* combinedShape@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "combinedShape@3x.png"; sourceTree = "<group>"; };
+		666EB81B1DD98A3200F67EC3 /* downarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downarrow.png; sourceTree = "<group>"; };
+		666EB81C1DD98A3200F67EC3 /* downarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "downarrow@2x.png"; sourceTree = "<group>"; };
+		666EB81D1DD98A3200F67EC3 /* downarrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "downarrow@3x.png"; sourceTree = "<group>"; };
+		666EB81E1DD98A3200F67EC3 /* leftarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftarrow.png; sourceTree = "<group>"; };
+		666EB81F1DD98A3200F67EC3 /* leftarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftarrow@2x.png"; sourceTree = "<group>"; };
+		666EB8201DD98A3200F67EC3 /* leftarrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftarrow@3x.png"; sourceTree = "<group>"; };
+		666EB82A1DD98A4500F67EC3 /* rightarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightarrow.png; sourceTree = "<group>"; };
+		666EB82B1DD98A4500F67EC3 /* rightarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightarrow@2x.png"; sourceTree = "<group>"; };
+		666EB82C1DD98A4500F67EC3 /* rightarrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightarrow@3x.png"; sourceTree = "<group>"; };
+		666EB82D1DD98A4500F67EC3 /* uparrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uparrow.png; sourceTree = "<group>"; };
+		666EB82E1DD98A4500F67EC3 /* uparrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@2x.png"; sourceTree = "<group>"; };
+		666EB82F1DD98A4500F67EC3 /* uparrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@3x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		666EB7B01DD812F000F67EC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		663646741DE2539800E6D719 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				663646791DE25C7B00E6D719 /* popSound.mp3 */,
+				663646751DE2539800E6D719 /* pop.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		6636467D1DE2CEE300E6D719 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				666EB7B81DD812F100F67EC3 /* HomeScreen.swift */,
+				6636467B1DE26AF400E6D719 /* LogInScreen.swift */,
+				663646801DE2E6CE00E6D719 /* SignUpScreen.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6636467E1DE2CEF200E6D719 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				666EB7BF1DD812F100F67EC3 /* LaunchScreen.storyboard */,
+				666EB7BA1DD812F100F67EC3 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6636467F1DE2CEFE00E6D719 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		666EB7AA1DD812F000F67EC3 = {
+			isa = PBXGroup;
+			children = (
+				663646741DE2539800E6D719 /* sounds */,
+				666EB7ED1DD95C7D00F67EC3 /* images */,
+				666EB7B51DD812F100F67EC3 /* Poplur */,
+				666EB7B41DD812F100F67EC3 /* Products */,
+				666EB7C81DD8137A00F67EC3 /* apptist logo.png */,
+				666EB7D61DD84F5900F67EC3 /* Myriad-Pro-Semibold_31650.ttf */,
+				666EB7D71DD84F5900F67EC3 /* Myriad-Pro-Condensed_31633.ttf */,
+			);
+			sourceTree = "<group>";
+		};
+		666EB7B41DD812F100F67EC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				666EB7B31DD812F100F67EC3 /* Poplur.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		666EB7B51DD812F100F67EC3 /* Poplur */ = {
+			isa = PBXGroup;
+			children = (
+				6636467F1DE2CEFE00E6D719 /* Model */,
+				6636467E1DE2CEF200E6D719 /* View */,
+				6636467D1DE2CEE300E6D719 /* Controller */,
+				666EB7DE1DD8518600F67EC3 /* Common */,
+				666EB7B61DD812F100F67EC3 /* AppDelegate.swift */,
+				666EB7BD1DD812F100F67EC3 /* Assets.xcassets */,
+				666EB7C21DD812F100F67EC3 /* Info.plist */,
+			);
+			path = Poplur;
+			sourceTree = "<group>";
+		};
+		666EB7DE1DD8518600F67EC3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				666EB7DF1DD851A000F67EC3 /* CircleButton.swift */,
+				666EB8161DD966F800F67EC3 /* CustomLabels.swift */,
+				666EB7E31DD94BA600F67EC3 /* PoplurScreen.swift */,
+				666EB7E51DD94C3400F67EC3 /* PoplurRemote.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		666EB7ED1DD95C7D00F67EC3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				663646841DE2E9B000E6D719 /* forgotPw@2x.png */,
+				663646851DE2E9B000E6D719 /* forgotPw@3x.png */,
+				663646821DE2E9A100E6D719 /* forgotPw.png */,
+				666EB82A1DD98A4500F67EC3 /* rightarrow.png */,
+				666EB82B1DD98A4500F67EC3 /* rightarrow@2x.png */,
+				666EB82C1DD98A4500F67EC3 /* rightarrow@3x.png */,
+				666EB82D1DD98A4500F67EC3 /* uparrow.png */,
+				666EB82E1DD98A4500F67EC3 /* uparrow@2x.png */,
+				666EB82F1DD98A4500F67EC3 /* uparrow@3x.png */,
+				666EB8181DD98A3200F67EC3 /* combinedShape.png */,
+				666EB8191DD98A3200F67EC3 /* combinedShape@2x.png */,
+				666EB81A1DD98A3200F67EC3 /* combinedShape@3x.png */,
+				666EB81B1DD98A3200F67EC3 /* downarrow.png */,
+				666EB81C1DD98A3200F67EC3 /* downarrow@2x.png */,
+				666EB81D1DD98A3200F67EC3 /* downarrow@3x.png */,
+				666EB81E1DD98A3200F67EC3 /* leftarrow.png */,
+				666EB81F1DD98A3200F67EC3 /* leftarrow@2x.png */,
+				666EB8201DD98A3200F67EC3 /* leftarrow@3x.png */,
+				666EB8041DD9605700F67EC3 /* bitmap.png */,
+				666EB8051DD9605700F67EC3 /* bitmap@2x.png */,
+				666EB8061DD9605700F67EC3 /* bitmap@3x.png */,
+				666EB8071DD9605700F67EC3 /* login.png */,
+				666EB8081DD9605700F67EC3 /* login@2x.png */,
+				666EB8091DD9605700F67EC3 /* login@3x.png */,
+				666EB80A1DD9605700F67EC3 /* logo.png */,
+				666EB80B1DD9605700F67EC3 /* logo@2x.png */,
+				666EB80C1DD9605700F67EC3 /* logo@3x.png */,
+				666EB7EE1DD95C7D00F67EC3 /* apptist logo.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		666EB7B21DD812F000F67EC3 /* Poplur */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 666EB7C51DD812F100F67EC3 /* Build configuration list for PBXNativeTarget "Poplur" */;
+			buildPhases = (
+				666EB7AF1DD812F000F67EC3 /* Sources */,
+				666EB7B01DD812F000F67EC3 /* Frameworks */,
+				666EB7B11DD812F000F67EC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Poplur;
+			productName = Poplur;
+			productReference = 666EB7B31DD812F100F67EC3 /* Poplur.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		666EB7AB1DD812F000F67EC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Apptist;
+				TargetAttributes = {
+					666EB7B21DD812F000F67EC3 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = VDQS4882Z8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 666EB7AE1DD812F000F67EC3 /* Build configuration list for PBXProject "Poplur" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 666EB7AA1DD812F000F67EC3;
+			productRefGroup = 666EB7B41DD812F100F67EC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				666EB7B21DD812F000F67EC3 /* Poplur */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		666EB7B11DD812F000F67EC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666EB8121DD9605700F67EC3 /* login@3x.png in Resources */,
+				666EB80F1DD9605700F67EC3 /* bitmap@3x.png in Resources */,
+				666EB80E1DD9605700F67EC3 /* bitmap@2x.png in Resources */,
+				666EB8221DD98A3200F67EC3 /* combinedShape@2x.png in Resources */,
+				666EB8111DD9605700F67EC3 /* login@2x.png in Resources */,
+				666EB8131DD9605700F67EC3 /* logo.png in Resources */,
+				666EB7C11DD812F100F67EC3 /* LaunchScreen.storyboard in Resources */,
+				666EB8331DD98A4500F67EC3 /* uparrow.png in Resources */,
+				666EB8241DD98A3200F67EC3 /* downarrow.png in Resources */,
+				666EB8291DD98A3200F67EC3 /* leftarrow@3x.png in Resources */,
+				666EB7D81DD84F7000F67EC3 /* Myriad-Pro-Semibold_31650.ttf in Resources */,
+				666EB8271DD98A3200F67EC3 /* leftarrow.png in Resources */,
+				666EB80D1DD9605700F67EC3 /* bitmap.png in Resources */,
+				666EB8321DD98A4500F67EC3 /* rightarrow@3x.png in Resources */,
+				666EB8281DD98A3200F67EC3 /* leftarrow@2x.png in Resources */,
+				666EB8251DD98A3200F67EC3 /* downarrow@2x.png in Resources */,
+				663646861DE2E9B000E6D719 /* forgotPw@2x.png in Resources */,
+				666EB7D91DD84F7200F67EC3 /* Myriad-Pro-Condensed_31633.ttf in Resources */,
+				666EB8101DD9605700F67EC3 /* login.png in Resources */,
+				666EB8261DD98A3200F67EC3 /* downarrow@3x.png in Resources */,
+				666EB8211DD98A3200F67EC3 /* combinedShape.png in Resources */,
+				6636467A1DE25C7B00E6D719 /* popSound.mp3 in Resources */,
+				663646761DE2539800E6D719 /* pop.mp3 in Resources */,
+				666EB8351DD98A4500F67EC3 /* uparrow@3x.png in Resources */,
+				666EB8151DD9605700F67EC3 /* logo@3x.png in Resources */,
+				666EB8141DD9605700F67EC3 /* logo@2x.png in Resources */,
+				666EB7CE1DD8137A00F67EC3 /* apptist logo.png in Resources */,
+				666EB7BE1DD812F100F67EC3 /* Assets.xcassets in Resources */,
+				666EB8301DD98A4500F67EC3 /* rightarrow.png in Resources */,
+				663646831DE2E9A100E6D719 /* forgotPw.png in Resources */,
+				663646871DE2E9B000E6D719 /* forgotPw@3x.png in Resources */,
+				666EB8341DD98A4500F67EC3 /* uparrow@2x.png in Resources */,
+				666EB7F91DD95C7D00F67EC3 /* apptist logo.png in Resources */,
+				666EB8231DD98A3200F67EC3 /* combinedShape@3x.png in Resources */,
+				666EB7BC1DD812F100F67EC3 /* Main.storyboard in Resources */,
+				666EB8311DD98A4500F67EC3 /* rightarrow@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		666EB7AF1DD812F000F67EC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666EB7B91DD812F100F67EC3 /* HomeScreen.swift in Sources */,
+				666EB7E61DD94C3400F67EC3 /* PoplurRemote.swift in Sources */,
+				666EB7B71DD812F100F67EC3 /* AppDelegate.swift in Sources */,
+				663646811DE2E6CE00E6D719 /* SignUpScreen.swift in Sources */,
+				666EB7E01DD851A000F67EC3 /* CircleButton.swift in Sources */,
+				666EB7E41DD94BA600F67EC3 /* PoplurScreen.swift in Sources */,
+				666EB8171DD966F800F67EC3 /* CustomLabels.swift in Sources */,
+				6636467C1DE26AF400E6D719 /* LogInScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		666EB7BA1DD812F100F67EC3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				666EB7BB1DD812F100F67EC3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		666EB7BF1DD812F100F67EC3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				666EB7C01DD812F100F67EC3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		666EB7C31DD812F100F67EC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		666EB7C41DD812F100F67EC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		666EB7C61DD812F100F67EC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VDQS4882Z8;
+				INFOPLIST_FILE = Poplur/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mark-Meritt.Poplur";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		666EB7C71DD812F100F67EC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VDQS4882Z8;
+				INFOPLIST_FILE = Poplur/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mark-Meritt.Poplur";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		666EB7AE1DD812F000F67EC3 /* Build configuration list for PBXProject "Poplur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				666EB7C31DD812F100F67EC3 /* Debug */,
+				666EB7C41DD812F100F67EC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		666EB7C51DD812F100F67EC3 /* Build configuration list for PBXNativeTarget "Poplur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				666EB7C61DD812F100F67EC3 /* Debug */,
+				666EB7C71DD812F100F67EC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 666EB7AB1DD812F000F67EC3 /* Project object */;
+}
