@@ -51,10 +51,12 @@
 		666EB8331DD98A4500F67EC3 /* uparrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82D1DD98A4500F67EC3 /* uparrow.png */; };
 		666EB8341DD98A4500F67EC3 /* uparrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82E1DD98A4500F67EC3 /* uparrow@2x.png */; };
 		666EB8351DD98A4500F67EC3 /* uparrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82F1DD98A4500F67EC3 /* uparrow@3x.png */; };
+		926238C8C5D31F027D6515AA /* Pods_Poplur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D31A36889BA5C96D6F9467 /* Pods_Poplur.framework */; };
 		9298DE261DE3B25600A4598F /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298DE251DE3B25600A4598F /* CameraVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64D31A36889BA5C96D6F9467 /* Pods_Poplur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poplur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		663646751DE2539800E6D719 /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
 		663646791DE25C7B00E6D719 /* popSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = popSound.mp3; sourceTree = "<group>"; };
 		6636467B1DE26AF400E6D719 /* LogInScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInScreen.swift; sourceTree = "<group>"; };
@@ -102,6 +104,8 @@
 		666EB82E1DD98A4500F67EC3 /* uparrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@2x.png"; sourceTree = "<group>"; };
 		666EB82F1DD98A4500F67EC3 /* uparrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@3x.png"; sourceTree = "<group>"; };
 		9298DE251DE3B25600A4598F /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		BE16A0DFFEE7307652C33F12 /* Pods-Poplur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poplur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Poplur/Pods-Poplur.debug.xcconfig"; sourceTree = "<group>"; };
+		CE37EA12C7E5E81D1F58AD3F /* Pods-Poplur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poplur.release.xcconfig"; path = "Pods/Target Support Files/Pods-Poplur/Pods-Poplur.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +113,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926238C8C5D31F027D6515AA /* Pods_Poplur.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33F1DA9A01683A21306797BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64D31A36889BA5C96D6F9467 /* Pods_Poplur.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		663646741DE2539800E6D719 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +174,8 @@
 				666EB7C81DD8137A00F67EC3 /* apptist logo.png */,
 				666EB7D61DD84F5900F67EC3 /* Myriad-Pro-Semibold_31650.ttf */,
 				666EB7D71DD84F5900F67EC3 /* Myriad-Pro-Condensed_31633.ttf */,
+				A2295548DB6DB220CAD32D42 /* Pods */,
+				33F1DA9A01683A21306797BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,6 +247,15 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		A2295548DB6DB220CAD32D42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE16A0DFFEE7307652C33F12 /* Pods-Poplur.debug.xcconfig */,
+				CE37EA12C7E5E81D1F58AD3F /* Pods-Poplur.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -239,9 +263,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 666EB7C51DD812F100F67EC3 /* Build configuration list for PBXNativeTarget "Poplur" */;
 			buildPhases = (
+				82E7345A743C2C62EC594B1F /* [CP] Check Pods Manifest.lock */,
 				666EB7AF1DD812F000F67EC3 /* Sources */,
 				666EB7B01DD812F000F67EC3 /* Frameworks */,
 				666EB7B11DD812F000F67EC3 /* Resources */,
+				0F51FF7DB32121391E3E721E /* [CP] Embed Pods Frameworks */,
+				FF46042B1325D192C1718F5D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -332,6 +359,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F51FF7DB32121391E3E721E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Poplur/Pods-Poplur-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82E7345A743C2C62EC594B1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF46042B1325D192C1718F5D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Poplur/Pods-Poplur-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		666EB7AF1DD812F000F67EC3 /* Sources */ = {
@@ -467,6 +542,7 @@
 		};
 		666EB7C61DD812F100F67EC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE16A0DFFEE7307652C33F12 /* Pods-Poplur.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P486JETJ9C;
@@ -480,6 +556,7 @@
 		};
 		666EB7C71DD812F100F67EC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE37EA12C7E5E81D1F58AD3F /* Pods-Poplur.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P486JETJ9C;
