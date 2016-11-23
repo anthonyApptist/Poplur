@@ -53,6 +53,14 @@
 		666EB8351DD98A4500F67EC3 /* uparrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82F1DD98A4500F67EC3 /* uparrow@3x.png */; };
 		926238C8C5D31F027D6515AA /* Pods_Poplur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D31A36889BA5C96D6F9467 /* Pods_Poplur.framework */; };
 		9298DE261DE3B25600A4598F /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298DE251DE3B25600A4598F /* CameraVC.swift */; };
+		92F4B8771DE533D500048EB2 /* AssetUploadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B8761DE533D500048EB2 /* AssetUploadingDelegate.swift */; };
+		92F4B8791DE533E900048EB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B8781DE533E900048EB2 /* User.swift */; };
+		92F4B87B1DE533FD00048EB2 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B87A1DE533FD00048EB2 /* PreviewView.swift */; };
+		92F4B87D1DE5342100048EB2 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B87C1DE5342100048EB2 /* PhotoCaptureDelegate.swift */; };
+		92F4B87F1DE5344400048EB2 /* AfterPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B87E1DE5344400048EB2 /* AfterPostView.swift */; };
+		92FD3EB11DE531B3009341C9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD3EB01DE531B3009341C9 /* AuthService.swift */; };
+		92FD3EB31DE531C8009341C9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD3EB21DE531C8009341C9 /* DataService.swift */; };
+		92FD3EB51DE53251009341C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92FD3EB41DE53251009341C9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +112,14 @@
 		666EB82E1DD98A4500F67EC3 /* uparrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@2x.png"; sourceTree = "<group>"; };
 		666EB82F1DD98A4500F67EC3 /* uparrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@3x.png"; sourceTree = "<group>"; };
 		9298DE251DE3B25600A4598F /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		92F4B8761DE533D500048EB2 /* AssetUploadingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetUploadingDelegate.swift; sourceTree = "<group>"; };
+		92F4B8781DE533E900048EB2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		92F4B87A1DE533FD00048EB2 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		92F4B87C1DE5342100048EB2 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
+		92F4B87E1DE5344400048EB2 /* AfterPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AfterPostView.swift; sourceTree = "<group>"; };
+		92FD3EB01DE531B3009341C9 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		92FD3EB21DE531C8009341C9 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		92FD3EB41DE53251009341C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE16A0DFFEE7307652C33F12 /* Pods-Poplur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poplur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Poplur/Pods-Poplur.debug.xcconfig"; sourceTree = "<group>"; };
 		CE37EA12C7E5E81D1F58AD3F /* Pods-Poplur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poplur.release.xcconfig"; path = "Pods/Target Support Files/Pods-Poplur/Pods-Poplur.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +176,9 @@
 		6636467F1DE2CEFE00E6D719 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				92FD3EB01DE531B3009341C9 /* AuthService.swift */,
+				92FD3EB21DE531C8009341C9 /* DataService.swift */,
+				92F4B8781DE533E900048EB2 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -171,6 +190,7 @@
 				666EB7ED1DD95C7D00F67EC3 /* images */,
 				666EB7B51DD812F100F67EC3 /* Poplur */,
 				666EB7B41DD812F100F67EC3 /* Products */,
+				92FD3EB41DE53251009341C9 /* GoogleService-Info.plist */,
 				666EB7C81DD8137A00F67EC3 /* apptist logo.png */,
 				666EB7D61DD84F5900F67EC3 /* Myriad-Pro-Semibold_31650.ttf */,
 				666EB7D71DD84F5900F67EC3 /* Myriad-Pro-Condensed_31633.ttf */,
@@ -204,10 +224,14 @@
 		666EB7DE1DD8518600F67EC3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				92F4B87E1DE5344400048EB2 /* AfterPostView.swift */,
+				92F4B87A1DE533FD00048EB2 /* PreviewView.swift */,
+				92F4B87C1DE5342100048EB2 /* PhotoCaptureDelegate.swift */,
 				666EB7DF1DD851A000F67EC3 /* CircleButton.swift */,
 				666EB8161DD966F800F67EC3 /* CustomLabels.swift */,
 				666EB7E31DD94BA600F67EC3 /* PoplurScreen.swift */,
 				666EB7E51DD94C3400F67EC3 /* PoplurRemote.swift */,
+				92F4B8761DE533D500048EB2 /* AssetUploadingDelegate.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -344,6 +368,7 @@
 				663646761DE2539800E6D719 /* pop.mp3 in Resources */,
 				666EB8351DD98A4500F67EC3 /* uparrow@3x.png in Resources */,
 				666EB8151DD9605700F67EC3 /* logo@3x.png in Resources */,
+				92FD3EB51DE53251009341C9 /* GoogleService-Info.plist in Resources */,
 				666EB8141DD9605700F67EC3 /* logo@2x.png in Resources */,
 				666EB7CE1DD8137A00F67EC3 /* apptist logo.png in Resources */,
 				666EB7BE1DD812F100F67EC3 /* Assets.xcassets in Resources */,
@@ -413,13 +438,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F4B8791DE533E900048EB2 /* User.swift in Sources */,
+				92F4B87F1DE5344400048EB2 /* AfterPostView.swift in Sources */,
 				666EB7B91DD812F100F67EC3 /* HomeScreen.swift in Sources */,
 				9298DE261DE3B25600A4598F /* CameraVC.swift in Sources */,
+				92F4B87D1DE5342100048EB2 /* PhotoCaptureDelegate.swift in Sources */,
 				666EB7E61DD94C3400F67EC3 /* PoplurRemote.swift in Sources */,
 				666EB7B71DD812F100F67EC3 /* AppDelegate.swift in Sources */,
 				663646811DE2E6CE00E6D719 /* SignUpScreen.swift in Sources */,
+				92FD3EB31DE531C8009341C9 /* DataService.swift in Sources */,
 				666EB7E01DD851A000F67EC3 /* CircleButton.swift in Sources */,
 				666EB7E41DD94BA600F67EC3 /* PoplurScreen.swift in Sources */,
+				92F4B87B1DE533FD00048EB2 /* PreviewView.swift in Sources */,
+				92FD3EB11DE531B3009341C9 /* AuthService.swift in Sources */,
+				92F4B8771DE533D500048EB2 /* AssetUploadingDelegate.swift in Sources */,
 				666EB8171DD966F800F67EC3 /* CustomLabels.swift in Sources */,
 				6636467C1DE26AF400E6D719 /* LogInScreen.swift in Sources */,
 			);
@@ -548,7 +580,7 @@
 				DEVELOPMENT_TEAM = P486JETJ9C;
 				INFOPLIST_FILE = Poplur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Mark-Meritt.Poplur";
+				PRODUCT_BUNDLE_IDENTIFIER = Apptist.Poplur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -562,7 +594,7 @@
 				DEVELOPMENT_TEAM = P486JETJ9C;
 				INFOPLIST_FILE = Poplur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Mark-Meritt.Poplur";
+				PRODUCT_BUNDLE_IDENTIFIER = Apptist.Poplur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
