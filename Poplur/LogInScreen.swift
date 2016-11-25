@@ -66,4 +66,28 @@ class LogInScreen: PoplurScreen {
         pwTextField.resignFirstResponder()
     }
     
+    func loginButtonFunction() {
+        if let email = nameTextField.text , let password = pwTextField.text , (email.characters.count > 0 && password.characters.count > 0) {
+            
+            // call the login service
+            AuthService.instance.login(email: email, password: password, onComplete: { (errorMessage, data) in
+                if errorMessage != nil {
+                    let alert = UIAlertController(title: "Error Authentication", message: errorMessage, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
+                else {
+                    self.dismiss(animated: true, completion: nil)
+//                    self.signoutButton.alpha = 1.0
+                }
+            })
+        }
+        else {
+            let alert = UIAlertController(title: " Username and Password Required", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
 }
