@@ -24,13 +24,30 @@ protocol PoplurRemoteDelegate {
     
 }
 
-class PoplurRemote: UIButton {
+class PoplurRemote: UIButton, PoplurScreenDelegate {
+    
+    func calculateX(x: CGFloat) -> CGFloat {
+        let calc = x / screenWidth
+        
+        let result = screenWidth * calc
+        
+        return result
+
+    }
+    
+    func calculateY(y: CGFloat) -> CGFloat {
+        let calc = y / screenHeight
+        
+        let result = screenHeight * calc
+        
+        return result
+    }
     
     var delegate: PoplurRemoteDelegate?
     
      func createLeftBtn() -> CircleButton {
         
-        let leftBtn = CircleButton(frame: CGRect(x: 120, y: 546, width: 70.2, height: 67.1))
+        let leftBtn = CircleButton(frame: CGRect(x: self.calculateX(x:120), y: self.calculateY(y:546), width: self.calculateX(x:70.2), height: self.calculateY(y:67.1)))
         leftBtn.setColorBlue()
         
         let leftBtnArrow = UIImage(named: "leftarrow")
@@ -46,7 +63,7 @@ class PoplurRemote: UIButton {
     
      func createRightBtn() -> CircleButton {
         
-        let rightBtn = CircleButton(frame: CGRect(x: 185.2, y: 546, width: 70.2, height: 67.1))
+        let rightBtn = CircleButton(frame: CGRect(x: self.calculateX(x:185.2), y: self.calculateY(y:546), width: self.calculateX(x:70.2), height: self.calculateY(y:67.1)))
         rightBtn.setColorRed()
         
         let rightBtnArrow = UIImage(named: "rightarrow")
@@ -62,7 +79,7 @@ class PoplurRemote: UIButton {
     
      func createUpBtn() -> CircleButton {
         
-        let upBtn = CircleButton(frame: CGRect(x: 153.5, y: 511.5, width: 70.2, height: 67.1))
+        let upBtn = CircleButton(frame: CGRect(x: self.calculateX(x:153.5), y: self.calculateY(y:511.5), width: self.calculateX(x: 70.2), height: self.calculateY(y:67.1)))
         upBtn.setColorGreen()
         
         let upBtnArrow = UIImage(named: "uparrow")
@@ -77,7 +94,7 @@ class PoplurRemote: UIButton {
     
      func createDownBtn() -> CircleButton {
 
-        let downBtn = CircleButton(frame: CGRect(x: 153.5, y: 576, width: 70.2, height: 67.1))
+        let downBtn = CircleButton(frame: CGRect(x: self.calculateX(x:153.5), y: self.calculateY(y: 576), width: self.calculateX(x: 70.2), height: self.calculateY(y: 67.1)))
         downBtn.setColorOrange()
         
         let downBtnArrow = UIImage(named: "downarrow")
@@ -92,7 +109,7 @@ class PoplurRemote: UIButton {
     
      func createMiddleBtn() -> CircleButton {
         
-        let middleBtn = CircleButton(frame: CGRect(x: 153, y: 545, width: 70.2, height: 67.1))
+        let middleBtn = CircleButton(frame: CGRect(x: self.calculateX(x: 153), y: self.calculateY(y:545), width: self.calculateX(x:70.2), height: self.calculateY(y:67.1)))
         middleBtn.setColorClear()
         
         let middleBtnArrow = UIImage(named: "combinedShape")

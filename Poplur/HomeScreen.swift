@@ -25,7 +25,7 @@ class HomeScreen: PoplurScreen {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        backgroundImageView.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
+        backgroundImageView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         backgroundImage = UIImage(named: "bitmap")!
         backgroundImageView.image = backgroundImage
         
@@ -37,11 +37,11 @@ class HomeScreen: PoplurScreen {
         super.viewDidAppear(true)
       
         // Do any additional setup after loading the view, typically from a nib.
-        let banner = UIView(frame: CGRect(x: 0, y: 240, width: 375, height: 42))
+        let banner = UIView(frame: CGRect(x: 0, y: calculateY(y: 240), width: calculateX(x: 375), height: calculateY(y: 42)))
         banner.backgroundColor = UIColor.black
         self.view.addSubview(banner)
         
-        label.frame = CGRect(x: 31, y: 250.2, width: 313, height: 21)
+        label.frame = CGRect(x: calculateX(x:31), y: calculateY(y:250.2), width: calculateX(x:313), height: calculateY(y:21))
         label.text = "see the most poplur music near you"
         label.setSpacing(space: 2.08)
         self.view.addSubview(label)
@@ -49,7 +49,7 @@ class HomeScreen: PoplurScreen {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
 
         
-       let poplurLogo = CircleButton(frame: CGRect(x: 109, y: 82.2, width: 91.52, height: 87.8))
+        let poplurLogo = CircleButton(frame: CGRect(x: self.calculateX(x:109), y: self.calculateY(y:82.2), width: self.calculateX(x:91.52), height: self.calculateY(y:87.8)))
         poplurLogo.addBorder()
         poplurLogo.animateRadius(scale: 1.5, soundOn: true)
         poplurLogo.setColorClear()
@@ -61,7 +61,7 @@ class HomeScreen: PoplurScreen {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
             
         
-        let poplurChannel = CircleButton(frame: CGRect(x: 190.57, y: 72, width: 92, height: 88))
+        let poplurChannel = CircleButton(frame: CGRect(x: self.calculateX(x:190.57), y: self.calculateY(y:72), width: self.calculateX(x: 92), height: self.calculateY(y: 88)))
         poplurChannel.addBorder()
         poplurChannel.animateRadius(scale: 1.5, soundOn: true)
         poplurChannel.setColorClear()
@@ -73,7 +73,7 @@ class HomeScreen: PoplurScreen {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
             
             
-            let loginBtn = CircleButton(frame: CGRect(x: 109, y: 360, width: 91.78, height: 87.68))
+            let loginBtn = CircleButton(frame: CGRect(x: self.calculateX(x:109), y: self.calculateY(y:360), width: self.calculateX(x:91.78), height: self.calculateY(y:87.68)))
             loginBtn.addBorder()
             loginBtn.animateRadius(scale: 1.5, soundOn: true)
             loginBtn.setColorClear()
@@ -86,7 +86,7 @@ class HomeScreen: PoplurScreen {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
             
         
-            let signUpBtn = CircleButton(frame: CGRect(x: 190.57, y: 350.7, width: 91.78, height: 87.68))
+            let signUpBtn = CircleButton(frame: CGRect(x: self.calculateX(x:190.57), y: self.calculateY(y:350.7), width: self.calculateX(x:91.78), height: self.calculateY(y:87.68)))
             signUpBtn.addBorder()
             signUpBtn.animateRadius(scale: 1.5, soundOn: true)
             signUpBtn.setColorClear()
