@@ -84,25 +84,18 @@ class CircleButton: UIButton {
    private func playSound(){
         
         let poppingSound = URL(fileURLWithPath: Bundle.main.path(forResource: "pop", ofType: "mp3")!)
-        
-        
+    
         do {
-            
         audioPlayer = try AVAudioPlayer(contentsOf: poppingSound)
-            
         audioPlayer.prepareToPlay()
-            
         audioPlayer.setVolume(0.1, fadeDuration: 0.1)
-            
         audioPlayer.play()
-            
       } catch {
-            
             print("Error getting the audio file")
-            
       }
-        
     }
+    
+    
 
 
 }

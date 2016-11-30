@@ -21,32 +21,32 @@ class LogInScreen: PoplurScreen {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let forgotPasswordBtn = UIButton(frame: CGRect(x: self.calculateX(x:106), y: self.calculateY(y:334), width: self.calculateX(x:164), height: self.calculateY(y:123)))
+        let forgotPasswordBtn = UIButton(frame: CGRect(x: 106, y: 334, width: 164, height: 123))
         let forgotPasswordImg = UIImage(named: "forgotPw")
         
-        backgroundImageView.frame = CGRect(x: 0, y: 0, width: self.calculateX(x:375), height: self.calculateY(y:667))
+        backgroundImageView.frame = CGRect(x: 0, y: 0, width: 375, height:667)
         backgroundImage = UIImage(named: "bitmap")!
         backgroundImageView.image = backgroundImage
         
             
-        usernameBtn = CircleButton(frame: CGRect(x: self.calculateX(x:27), y: self.calculateY(y:61), width: self.calculateX(x:95.4), height: self.calculateY(y: 91.2)))
+        usernameBtn = CircleButton(frame: CGRect(x: 27, y: 61, width: 95.4, height: 91.2))
         usernameBtn.addText(string: "name", color: 0)
         usernameBtn.setColorClear()
         self.view.addSubview(usernameBtn)
         
         
-        passwordBtn = CircleButton(frame: CGRect(x: self.calculateX(x:27), y: self.calculateY(y:174.8), width: self.calculateX(x:95.4), height: self.calculateY(y: 91.2)))
+        passwordBtn = CircleButton(frame: CGRect(x: 27, y: 174.8, width: 95.4, height:91.2))
         passwordBtn.addText(string: "pw", color: 0)
         passwordBtn.setColorClear()
         self.view.addSubview(passwordBtn)
         
-        nameTextField = UITextField(frame: CGRect(x: self.calculateX(x:134.4), y: self.calculateY(y:89.5), width: self.calculateX(x:215.6), height: self.calculateY(y:36.6)))
+        nameTextField = UITextField(frame: CGRect(x: 134.4, y: 89.5, width: 215.6, height: 36.6))
         nameTextField.addBorder()
         nameTextField.layer.cornerRadius = 5.1
         nameTextField.layer.backgroundColor = UIColor.white.cgColor
         self.view.addSubview(nameTextField)
         
-        pwTextField = UITextField(frame: CGRect(x: self.calculateX(x:134.4), y: self.calculateY(y:201.5), width: self.calculateX(x:215.6), height: self.calculateY(y:36.6)))
+        pwTextField = UITextField(frame: CGRect(x:134.4, y:201.5, width: 215.6, height: 36.6))
         pwTextField.addBorder()
         pwTextField.layer.cornerRadius = 5.1
         pwTextField.layer.backgroundColor = UIColor.white.cgColor

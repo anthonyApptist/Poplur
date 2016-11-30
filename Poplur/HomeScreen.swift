@@ -10,8 +10,6 @@ import UIKit
 
 class HomeScreen: PoplurScreen {
     
-    var label: UILabel!
-    
     @IBAction func loginBtnPressed(_ sender: AnyObject) {
         
         present(LogInScreen(), animated: false, completion: nil)
@@ -29,51 +27,63 @@ class HomeScreen: PoplurScreen {
         backgroundImage = UIImage(named: "bitmap")!
         backgroundImageView.image = backgroundImage
         
-
+      let margins = self.view.layoutMarginsGuide
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-      
-        // Do any additional setup after loading the view, typically from a nib.
-        let banner = UIView(frame: CGRect(x: 0, y: calculateY(y: 240), width: calculateX(x: 375), height: calculateY(y: 42)))
-        banner.backgroundColor = UIColor.black
+      let topMargins = self.topLayoutGuide
+        
+      let bottomMargins = self.bottomLayoutGuide
+        
+        let banner = UIView(frame: CGRect(x: 0, y: 240, width: 660, height: 42))
         self.view.addSubview(banner)
         
-        label.frame = CGRect(x: calculateX(x:31), y: calculateY(y:250.2), width: calculateX(x:313), height: calculateY(y:21))
-        label.text = "see the most poplur music near you"
-        label.setSpacing(space: 2.08)
-        self.view.addSubview(label)
+   
+        let poplurLogo = CircleButton(frame: CGRect(x: 109, y: 82.2, width: 91.52, height: 87.8))
+        let poplurChannel = CircleButton(frame: CGRect(x: 190.57, y: 72, width: 92, height: 88))
+        let loginBtn = CircleButton(frame: CGRect(x: 109, y:360, width: 91.78, height: 87.68))
+        let signUpBtn = CircleButton(frame: CGRect(x:190.57, y: 350.7, width:91.78, height: 87.68))
+        
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
-
         
-        let poplurLogo = CircleButton(frame: CGRect(x: self.calculateX(x:109), y: self.calculateY(y:82.2), width: self.calculateX(x:91.52), height: self.calculateY(y:87.8)))
-        poplurLogo.addBorder()
-        poplurLogo.animateRadius(scale: 1.5, soundOn: true)
-        poplurLogo.setColorClear()
-        poplurLogo.addText(string: "poplur", color: 0)
-        self.view.addSubview(poplurLogo)
-                        
+          //  poplurLogo = CircleButton(frame: CGRect(x: 109, y: 82.2, width: 91.52, height: 87.8))
+            poplurLogo.addBorder()
+            poplurLogo.animateRadius(scale: 1.5, soundOn: true)
+            poplurLogo.setColorClear()
+            poplurLogo.addText(string: "poplur", color: 0)
+            self.view.addSubview(poplurLogo)
+            
+            poplurLogo.translatesAutoresizingMaskIntoConstraints = false
+           
+            poplurLogo.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 100).isActive = true
+            poplurLogo.topAnchor.constraint(equalTo: topMargins.bottomAnchor, constant: 105).isActive = true
+            poplurLogo.heightAnchor.constraint(equalTo: poplurLogo.heightAnchor, multiplier: 0.05, constant: 87.8).isActive = true
+            poplurLogo.widthAnchor.constraint(equalTo: poplurLogo.widthAnchor, multiplier: 0.05, constant: 91.52).isActive = true
+            
         }
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
             
-        
-        let poplurChannel = CircleButton(frame: CGRect(x: self.calculateX(x:190.57), y: self.calculateY(y:72), width: self.calculateX(x: 92), height: self.calculateY(y: 88)))
-        poplurChannel.addBorder()
-        poplurChannel.animateRadius(scale: 1.5, soundOn: true)
-        poplurChannel.setColorClear()
-        poplurChannel.addText(string: "Music", color: 1)
-        self.view.addSubview(poplurChannel)
-        
+            
+       //     poplurChannel = CircleButton(frame: CGRect(x: 190.57, y: 72, width: 92, height: 88))
+            poplurChannel.addBorder()
+            poplurChannel.animateRadius(scale: 1.5, soundOn: true)
+            poplurChannel.setColorClear()
+            poplurChannel.addText(string: "Music", color: 1)
+            self.view.addSubview(poplurChannel)
+            
+            poplurChannel.translatesAutoresizingMaskIntoConstraints = false
+            
+            poplurChannel.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 182).isActive = true
+            poplurChannel.topAnchor.constraint(equalTo: topMargins.bottomAnchor, constant: 82).isActive = true
+            poplurChannel.heightAnchor.constraint(equalTo: poplurChannel.heightAnchor, multiplier: 0.05, constant: 87.8).isActive = true
+            poplurChannel.widthAnchor.constraint(equalTo: poplurChannel.widthAnchor, multiplier: 0.05, constant: 91.52).isActive = true
+
+            
         }
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
             
             
-            let loginBtn = CircleButton(frame: CGRect(x: self.calculateX(x:109), y: self.calculateY(y:360), width: self.calculateX(x:91.78), height: self.calculateY(y:87.68)))
             loginBtn.addBorder()
             loginBtn.animateRadius(scale: 1.5, soundOn: true)
             loginBtn.setColorClear()
@@ -81,26 +91,57 @@ class HomeScreen: PoplurScreen {
             loginBtn.addTarget(self, action: #selector(self.loginBtnPressed(_:)), for: .touchUpInside)
             self.view.addSubview(loginBtn)
             
+            loginBtn.translatesAutoresizingMaskIntoConstraints = false
+            
+            loginBtn.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 100).isActive = true
+            loginBtn.topAnchor.constraint(equalTo: banner.bottomAnchor, constant: 68).isActive = true
+            loginBtn.heightAnchor.constraint(equalTo: loginBtn.heightAnchor, multiplier: 0.05, constant: 87.8).isActive = true
+            loginBtn.widthAnchor.constraint(equalTo: loginBtn.widthAnchor, multiplier: 0.05, constant: 91.52).isActive = true
+            
         }
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
             
-        
-            let signUpBtn = CircleButton(frame: CGRect(x: self.calculateX(x:190.57), y: self.calculateY(y:350.7), width: self.calculateX(x:91.78), height: self.calculateY(y:87.68)))
+            
             signUpBtn.addBorder()
             signUpBtn.animateRadius(scale: 1.5, soundOn: true)
             signUpBtn.setColorClear()
             signUpBtn.addText(string: "signup", color: 1)
             signUpBtn.addTarget(self, action: #selector(self.signUpBtnPressed(_:)), for: .touchUpInside)
             self.view.addSubview(signUpBtn)
-
             
+            signUpBtn.translatesAutoresizingMaskIntoConstraints = false
+            
+            signUpBtn.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 180).isActive = true
+            signUpBtn.topAnchor.constraint(equalTo: banner.bottomAnchor, constant: 45).isActive = true
+            signUpBtn.heightAnchor.constraint(equalTo: signUpBtn.heightAnchor, multiplier: 0.05, constant: 87.8).isActive = true
+            signUpBtn.widthAnchor.constraint(equalTo: signUpBtn.widthAnchor, multiplier: 0.05, constant: 91.52).isActive = true
         }
+        
+        banner.translatesAutoresizingMaskIntoConstraints = false
+        
+        banner.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: -20).isActive = true
+        banner.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: 20).isActive = true
+        banner.topAnchor.constraint(equalTo: poplurLogo.bottomAnchor, constant: 40).isActive = true
+        banner.bottomAnchor.constraint(equalTo: loginBtn.topAnchor, constant: -40).isActive = true
 
+        banner.backgroundColor = UIColor.black
         
+        let label = UILabel()
+        banner.addSubview(label)
         
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        label.centerXAnchor.constraint(equalTo: banner.centerXAnchor, constant: 0).isActive = true
+        label.centerYAnchor.constraint(equalTo: banner.centerYAnchor, constant: 0).isActive = true
+        
+        label.textColor = UIColor.white
+        label.text = "see the most poplur music near you"
+        label.setSpacing(space: 2.08)
+        
+      
     }
-    
+  
     
 
     override func didReceiveMemoryWarning() {
