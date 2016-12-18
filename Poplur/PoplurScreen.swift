@@ -8,77 +8,87 @@
 
 import UIKit
 
-
 let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
 
-class PoplurScreen: UIViewController, PoplurRemoteDelegate, UITextFieldDelegate {
+enum PoplurScreenName {
+    case none
+    case home
+    case discover
+    case ranked
+    case logIn
+    case signUp
+    case camera
+    case messageHome
+    case messageDetail
+}
+
+class PoplurScreen: UIViewController, UITextFieldDelegate {
+    
+    var leftVC: PoplurScreen?
+    var rightVC: PoplurScreen?
+    var downVC: PoplurScreen?
+    var middleVC: PoplurScreen?
     
     var margins : UILayoutGuide!
-    var topMargins : UILayoutSupport!
    
-    var backgroundImageView = UIImageView()
     var backgroundImage = UIImage()
     
     var remote: PoplurRemote!
     
-    var upScreen: PoplurScreen!
-    var downScreen: PoplurScreen!
-    var leftScreen: PoplurScreen!
-    var rightScreen: PoplurScreen!
-    var middleScreen: PoplurScreen!
+    var backgroundImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+    
+    var banner: UIBannerView?
+    
+    var name = PoplurScreenName.none
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        remote = PoplurRemote(frame: CGRect(x: 0, y: 0, width: 127, height: 122))
         
+        margins = self.view.layoutMarginsGuide
+        
+        remote = PoplurRemote(frame: CGRect(x: 0, y: 0, width: 1527, height: 1522))
+        
+        remote.isUserInteractionEnabled = true
+        
+        if name != PoplurScreenName.camera {
         self.view.addSubview(backgroundImageView)
-
-        self.view.addSubview(remote)
-                
+        
+        self.banner = UIBannerView()
+        self.view.addSubview(banner!)
+        
+            
+        backgroundImage = UIImage(named: "bitmap")!
+        backgroundImageView.image = backgroundImage
+        backgroundImageView.alpha = 0.9
         backgroundImageView.contentMode = .scaleAspectFill
-    
-    }
-    
-    @IBAction func upBtnPressed(_ sender: AnyObject) {
-        present(upScreen, animated: false, completion: nil)
-    }
-    
-    @IBAction func downBtnPressed(_ sender: AnyObject) {
-        present(downScreen, animated: false, completion: nil)
-    }
-    
-    @IBAction func leftBtnPressed(_ sender: AnyObject) {
-        present(leftScreen, animated: false, completion: nil)
-    }
-    
-    @IBAction func rightBtnPressed(_ sender: AnyObject) {
-        present(rightScreen, animated: false, completion: nil)
-    }
-    
-    @IBAction func middleBtnPressed(_ sender: AnyObject) {
-        present(middleScreen, animated: false, completion: nil)
-    }
-
-    
-    func setRemoteDirection(up: PoplurScreen?, down: PoplurScreen?, left: PoplurScreen?, right: PoplurScreen?, middle: PoplurScreen?) {
         
-        upScreen = up
-        downScreen = down
-        leftScreen = left
-        rightScreen = right
-        middleScreen = middle
+        backgroundImageView.pinToTop(view: self.view, margin: 0).isActive = true
+        backgroundImageView.pinToLeft(view: self.view, margin: 0).isActive = true
+        backgroundImageView.pinToRight(view: self.view, margin: 0).isActive = true
+        backgroundImageView.pinToBottom(view: self.view, margin: 0).isActive = true
+    
+        banner?.pinToLeft(view: self.view, margin: 0).isActive = true
+        banner?.pinToRight(view: self.view, margin: 0).isActive = true
+        banner?.pinToBottom(view: self.view, margin: -395).isActive = true
+        banner?.pinToTop(view: self.view, margin: 225).isActive = true
+        }
+        self.view.addSubview(remote)
 
-        remote.createUpBtn().addTarget(self, action: #selector(self.upBtnPressed(_:)), for: .touchUpInside)
-        remote.createDownBtn().addTarget(self, action: #selector(self.downBtnPressed(_:)), for: .touchUpInside)
-        remote.createLeftBtn().addTarget(self, action: #selector(self.leftBtnPressed(_:)), for: .touchUpInside)
-        remote.createRightBtn().addTarget(self, action: #selector(self.rightBtnPressed(_:)), for: .touchUpInside)
-        remote.createMiddleBtn().addTarget(self, action: #selector(self.middleBtnPressed(_:)), for: .touchUpInside)
+    }
+    
+    
+    func setScreenDirections(current: PoplurScreen?, left: PoplurScreen?, right: PoplurScreen?, down: PoplurScreen?, middle: PoplurScreen?){
+        
+        self.leftVC = left
+        self.rightVC = right
+        self.downVC = down
+        self.middleVC = middle
+        
         
     }
     
-   
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.resignFirstResponder()
     }

@@ -10,11 +10,17 @@ import UIKit
 
 class UIBannerView: UIView {
     
-    var banner: UIView!
     var label: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        self.frame = CGRect(x: 0, y: 240, width: UIScreen.main.bounds.width, height: 42)
+        
+    }
+    
+    func initWithOffsetY(frame: CGRect, offsetY: CGFloat) {
+        self.frame = CGRect(x: 0, y: 240 + offsetY, width: UIScreen.main.bounds.width, height: 42)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,22 +29,20 @@ class UIBannerView: UIView {
     
     func createBannerWithText(text: String) {
         
-        banner = UIView()
-        banner.backgroundColor = UIColor.black
-        self.addSubview(banner)
+        self.backgroundColor = UIColor.black
 
         label = UILabel()
-        banner.addSubview(label)
+        self.addSubview(label)
  
         label.text = text
         label.setSpacing(space: 2.08)
         
         label.translatesAutoresizingMaskIntoConstraints = false
+     
+        label.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0).isActive = true
+        label.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0).isActive = true
         
-        label.leadingAnchor.constraint(equalTo: banner.leadingAnchor, constant: 31).isActive = true
-        label.trailingAnchor.constraint(equalTo: banner.trailingAnchor, constant: -31).isActive = true
-        label.topAnchor.constraint(equalTo: banner.topAnchor, constant: 10).isActive = true
-        
+        label.textColor = UIColor.white
         
         
     }

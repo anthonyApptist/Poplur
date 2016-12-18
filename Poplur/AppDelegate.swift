@@ -15,11 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         FIRApp.configure()
+
+        window = UIWindow.init(frame: UIScreen.main.bounds)
         
+        let initialView = storyboard.instantiateViewController(withIdentifier: "ManagerVC") as! PoplurScreenManager
+            
+        window?.rootViewController = initialView
+        window?.makeKeyAndVisible()
+
+ 
         return true
     }
 

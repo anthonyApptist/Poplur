@@ -19,6 +19,12 @@ class SignUpScreen: PoplurScreen {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.name = PoplurScreenName.signUp
+    }
+ 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        
         
         backgroundImageView.frame = CGRect(x: 0, y: 0, width: 375, height:667)
         backgroundImage = UIImage(named: "bitmap")!
@@ -58,8 +64,6 @@ class SignUpScreen: PoplurScreen {
         pwTextField.layer.cornerRadius = 5.1
         pwTextField.layer.backgroundColor = UIColor.white.cgColor
         self.view.addSubview(pwTextField)
-        
-        remote.delegate?.setRemoteDirection(up: HomeScreen(), down: HomeScreen(), left: HomeScreen(), right: HomeScreen(), middle: HomeScreen())
         
         
     }

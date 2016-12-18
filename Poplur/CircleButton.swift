@@ -66,9 +66,9 @@ class CircleButton: UIButton {
     }
     
     func addText(string: String, color: Int) {
-        self.titleLabel?.font = UIFont(name: "MyriadPro-Cond", size: 24.5)
+        self.titleLabel?.font = UIFont(name: "MyriadPro-Semibold", size: 20.5)
         self.setTitle(string, for: UIControlState.normal)
-        
+        self.setSpacing(space: 0.1)
         if(color == 0) {
                 self.setTitleColor(UIColor.black, for: UIControlState.normal)
         } else {

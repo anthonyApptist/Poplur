@@ -13,7 +13,7 @@ import FirebaseDatabase
 import FirebaseAuth
 import Photos
 
-class CameraVC: UIViewController {
+class CameraVC: PoplurScreen {
     
     enum SessionSetupResult {
         case success
@@ -47,11 +47,17 @@ class CameraVC: UIViewController {
     
     var postButton: UIButton!
     
-    weak var delegate: AssetUploadingDelegate?
+    weak var assetdelegate: AssetUploadingDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.name = PoplurScreenName.camera
+        
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         
-        delegate = self
+        assetdelegate = self
         
         changeCameraButton = UIButton.init(frame: CGRect(x: 15, y: 15, width: 100, height: 100))
         

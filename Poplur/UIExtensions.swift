@@ -18,6 +18,16 @@ extension UILabel {
     }
 }
 
+extension UIButton {
+    func setSpacing(space: CGFloat) {
+        
+        let attributedString = NSMutableAttributedString(string: (self.titleLabel?.text!)!)
+        attributedString.addAttribute(NSKernAttributeName, value: space, range: NSMakeRange(0, attributedString.length))
+        self.titleLabel?.attributedText = attributedString
+        
+    }
+}
+
 extension UITextField {
     func addBorder() {
         self.layer.borderColor = UIColor.black.cgColor
