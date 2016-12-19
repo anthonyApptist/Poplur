@@ -53,6 +53,9 @@
 		666EB8351DD98A4500F67EC3 /* uparrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB82F1DD98A4500F67EC3 /* uparrow@3x.png */; };
 		926238C8C5D31F027D6515AA /* Pods_Poplur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D31A36889BA5C96D6F9467 /* Pods_Poplur.framework */; };
 		9298DE261DE3B25600A4598F /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298DE251DE3B25600A4598F /* CameraVC.swift */; };
+		92ACE8301DE76B2100D712FB /* AAPLCameraFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACE82F1DE76B2100D712FB /* AAPLCameraFunctions.swift */; };
+		92ACE8321DE76B2D00D712FB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACE8311DE76B2D00D712FB /* CameraViewController.swift */; };
+		92B4A6181DE7D83B00F35DED /* CameraVCCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4A6171DE7D83B00F35DED /* CameraVCCopy.swift */; };
 		92F4B8771DE533D500048EB2 /* AssetUploadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B8761DE533D500048EB2 /* AssetUploadingDelegate.swift */; };
 		92F4B8791DE533E900048EB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B8781DE533E900048EB2 /* User.swift */; };
 		92F4B87B1DE533FD00048EB2 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B87A1DE533FD00048EB2 /* PreviewView.swift */; };
@@ -112,6 +115,9 @@
 		666EB82E1DD98A4500F67EC3 /* uparrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@2x.png"; sourceTree = "<group>"; };
 		666EB82F1DD98A4500F67EC3 /* uparrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@3x.png"; sourceTree = "<group>"; };
 		9298DE251DE3B25600A4598F /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		92ACE82F1DE76B2100D712FB /* AAPLCameraFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPLCameraFunctions.swift; sourceTree = "<group>"; };
+		92ACE8311DE76B2D00D712FB /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		92B4A6171DE7D83B00F35DED /* CameraVCCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVCCopy.swift; sourceTree = "<group>"; };
 		92F4B8761DE533D500048EB2 /* AssetUploadingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetUploadingDelegate.swift; sourceTree = "<group>"; };
 		92F4B8781DE533E900048EB2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		92F4B87A1DE533FD00048EB2 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
@@ -157,7 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				666EB7B81DD812F100F67EC3 /* HomeScreen.swift */,
+				92ACE8311DE76B2D00D712FB /* CameraViewController.swift */,
 				9298DE251DE3B25600A4598F /* CameraVC.swift */,
+				92B4A6191DE7D87100F35DED /* CameraWork */,
 				6636467B1DE26AF400E6D719 /* LogInScreen.swift */,
 				663646801DE2E6CE00E6D719 /* SignUpScreen.swift */,
 			);
@@ -269,6 +277,15 @@
 				666EB7EE1DD95C7D00F67EC3 /* apptist logo.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		92B4A6191DE7D87100F35DED /* CameraWork */ = {
+			isa = PBXGroup;
+			children = (
+				92B4A6171DE7D83B00F35DED /* CameraVCCopy.swift */,
+				92ACE82F1DE76B2100D712FB /* AAPLCameraFunctions.swift */,
+			);
+			name = CameraWork;
 			sourceTree = "<group>";
 		};
 		A2295548DB6DB220CAD32D42 /* Pods */ = {
@@ -441,6 +458,7 @@
 				92F4B8791DE533E900048EB2 /* User.swift in Sources */,
 				92F4B87F1DE5344400048EB2 /* AfterPostView.swift in Sources */,
 				666EB7B91DD812F100F67EC3 /* HomeScreen.swift in Sources */,
+				92ACE8301DE76B2100D712FB /* AAPLCameraFunctions.swift in Sources */,
 				9298DE261DE3B25600A4598F /* CameraVC.swift in Sources */,
 				92F4B87D1DE5342100048EB2 /* PhotoCaptureDelegate.swift in Sources */,
 				666EB7E61DD94C3400F67EC3 /* PoplurRemote.swift in Sources */,
@@ -448,12 +466,14 @@
 				663646811DE2E6CE00E6D719 /* SignUpScreen.swift in Sources */,
 				92FD3EB31DE531C8009341C9 /* DataService.swift in Sources */,
 				666EB7E01DD851A000F67EC3 /* CircleButton.swift in Sources */,
+				92B4A6181DE7D83B00F35DED /* CameraVCCopy.swift in Sources */,
 				666EB7E41DD94BA600F67EC3 /* PoplurScreen.swift in Sources */,
 				92F4B87B1DE533FD00048EB2 /* PreviewView.swift in Sources */,
 				92FD3EB11DE531B3009341C9 /* AuthService.swift in Sources */,
 				92F4B8771DE533D500048EB2 /* AssetUploadingDelegate.swift in Sources */,
 				666EB8171DD966F800F67EC3 /* CustomLabels.swift in Sources */,
 				6636467C1DE26AF400E6D719 /* LogInScreen.swift in Sources */,
+				92ACE8321DE76B2D00D712FB /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +517,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -547,6 +568,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

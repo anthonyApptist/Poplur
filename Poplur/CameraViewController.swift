@@ -312,7 +312,9 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 		case movie = 1
 	}
 
-    var captureModeControl: UISegmentedControl!
+    private weak var captureModeControl: UISegmentedControl! {
+        return UISegmentedControl.init(frame: CGRect.zero)
+    }
 	
 	func toggleCaptureMode() {
 		if captureModeControl.selectedSegmentIndex == CaptureMode.photo.rawValue {
@@ -628,7 +630,9 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 	
 	private var backgroundRecordingID: UIBackgroundTaskIdentifier? = nil
 	
-    var recordButton: UIButton!
+    private weak var recordButton: UIButton! {
+        return UIButton.init(frame: CGRect.zero)
+    }
 	
 	@IBOutlet private weak var resumeButton: UIButton!
 	

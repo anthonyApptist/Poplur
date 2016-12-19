@@ -13,46 +13,39 @@ import FirebaseDatabase
 import FirebaseAuth
 import Photos
 
-class CameraVC: UIViewController {
+class CameraVC: CameraViewController {
     
-    enum SessionSetupResult {
-        case success
-        case notAuthorized
-        case configurationFailed
-    }
+//    var movieFileOutput: AVCaptureMovieFileOutput? = nila
     
     var previewView = PreviewView()
-
-    override var prefersStatusBarHidden: Bool {
-        get {
-            return true
-        }
-    }
-    
-    let session = AVCaptureSession()
-    
-    var isSessionRunning = false
-    
-    let sessionQueue = DispatchQueue(label: "session queue", attributes: [], target: nil)
-    
-    var setupResult: SessionSetupResult = .success
-    
+ 
+    /*
     var changeCameraButton: UIButton!
     
     var viewRecordButton: UIButton!
     
     var segmentedControl: UISegmentedControl!
     
-    var _videoURL: URL?
     
     var postButton: UIButton!
+*/
+    var _videoURL: URL?
     
-    weak var delegate: AssetUploadingDelegate?
-    
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidLoad() {
         
         delegate = self
         
+        _previewView = previewView
+        
+        super.viewDidLoad()
+        
+//        cameraAuthorization()
+        
+//        videoOutputSetup()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+    /*
         changeCameraButton = UIButton.init(frame: CGRect(x: 15, y: 15, width: 100, height: 100))
         
         changeCameraButton.setTitle("Camera", for: .normal)
@@ -75,8 +68,6 @@ class CameraVC: UIViewController {
 
 //        viewRecordButton.addTarget(self, action: #selector(recordButtonFunction(_:)), for: .touchUpInside)
         
-        
-        
         segmentedControl = UISegmentedControl.init(items: ["Photo", "Movie"])
         
         segmentedControl.frame = CGRect(x: 0, y: 0, width: 100, height: 30)
@@ -94,28 +85,29 @@ class CameraVC: UIViewController {
         postButton.setTitleColor(.white, for: .normal)
         postButton.isUserInteractionEnabled = false
         postButton.addTarget(self, action: #selector(postButtonFunction(_:)), for: .touchUpInside)
+     */
         
         
+//        previewView.frame = UIScreen.main.bounds
         
-        previewView.frame = UIScreen.main.bounds
+//        previewView.session = session   
         
 //        captureModeControl = segmentedControl
         
 //        recordButton = viewRecordButton
         
-        super.viewDidLoad()
+//        super.viewDidLoad()
     
         
-        view.addSubview(changeCameraButton)
+//        view.addSubview(changeCameraButton)
+//        
+//        view.addSubview(viewRecordButton)
+//        
+//        view.addSubview(segmentedControl)
+//        
+//        view.addSubview(postButton)
         
-        view.addSubview(viewRecordButton)
-        
-        view.addSubview(segmentedControl)
-        
-        view.addSubview(postButton)
-        
-        postButton.alpha = 0.0
-        
+//        postButton.alpha = 0.0
         
     }
     
@@ -125,13 +117,13 @@ class CameraVC: UIViewController {
         
         view.layer.addSublayer(previewView.videoPreviewLayer)
         
-        view.bringSubview(toFront: changeCameraButton)
-        
-        view.bringSubview(toFront: viewRecordButton)
-        
-        view.bringSubview(toFront: segmentedControl)
-        
-        view.bringSubview(toFront: postButton)
+//        view.bringSubview(toFront: changeCameraButton)
+//        
+//        view.bringSubview(toFront: viewRecordButton)
+//        
+//        view.bringSubview(toFront: segmentedControl)
+//        
+//        view.bringSubview(toFront: postButton)
         
     }
     
@@ -198,9 +190,9 @@ extension CameraVC: AssetUploadingDelegate {
 //        
 //        view.bringSubview(toFront: postButton)
         
-        self.postButton.alpha = 1.0
+//        self.postButton.alpha = 1.0
         
-        self.postButton.isUserInteractionEnabled = true
+//        self.postButton.isUserInteractionEnabled = true
     }
         
     func videoRecordingFailed() {

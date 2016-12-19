@@ -20,6 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        
+        let initialView = CameraVC()
+        
+        window?.rootViewController = initialView
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
