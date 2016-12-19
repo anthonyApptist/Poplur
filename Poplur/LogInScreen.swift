@@ -16,25 +16,28 @@ class LogInScreen: PoplurScreen {
     var nameTextField: UITextField!
     var pwTextField: UITextField!
     
-    let forgotPasswordBtn = UIButton(frame: CGRect(x: 106, y: 334, width: 164, height: 123))
-    let forgotPasswordImg = UIImage(named: "forgotPw")
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.banner?.initWithOffsetY(frame: (self.banner?.frame)!, offsetY: 55)
+        self.name = PoplurScreenName.logIn
+           self.setScreenDirections(current: self, left: HomeScreen(), right: HomeScreen(), down: HomeScreen(), middle: HomeScreen())
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
         
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+
+        self.usernameBtn = CircleButton(frame: CGRect(x: 27, y: 61, width: 95.4, height: 91.2))
+        self.usernameBtn.addText(string: "name", color: 0)
+        self.usernameBtn.setColorClear()
+        self.usernameBtn.animateRadius(scale: 1.5, soundOn: false)
+        self.view.addSubview(self.usernameBtn)
         
-        backgroundImageView.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
-        backgroundImage = UIImage(named: "bitmap")!
-        backgroundImageView.image = backgroundImage
+        }
         
-            
-        usernameBtn = CircleButton(frame: CGRect(x: 27, y: 61, width: 95.4, height: 91.2))
-        usernameBtn.addText(string: "name", color: 0)
-        usernameBtn.setColorClear()
-        self.view.addSubview(usernameBtn)
-        
-        
-        passwordBtn = CircleButton(frame: CGRect(x: 27, y: 174.8, width: 95.4, height: 91.2))
+        passwordBtn = CircleButton(frame: CGRect(x: 27, y: 174.8, width: 95.4, height:91.2))
         passwordBtn.addText(string: "pw", color: 0)
         passwordBtn.setColorClear()
         self.view.addSubview(passwordBtn)
@@ -45,20 +48,24 @@ class LogInScreen: PoplurScreen {
         nameTextField.layer.backgroundColor = UIColor.white.cgColor
         self.view.addSubview(nameTextField)
         
-        pwTextField = UITextField(frame: CGRect(x: 134.4, y: 201.5, width: 215.6, height: 36.6))
+        pwTextField = UITextField(frame: CGRect(x:134.4, y:201.5, width: 215.6, height: 36.6))
         pwTextField.addBorder()
         pwTextField.layer.cornerRadius = 5.1
         pwTextField.layer.backgroundColor = UIColor.white.cgColor
         self.view.addSubview(pwTextField)
         
+        let forgotPasswordBtn = UIButton(frame: CGRect(x: 106, y: 334, width: 164, height: 123))
+        let forgotPasswordImg = UIImage(named: "forgotPw")
+        
         forgotPasswordBtn.contentMode = .scaleAspectFill
         forgotPasswordBtn.setImage(forgotPasswordImg, for: .normal)
         self.view.addSubview(forgotPasswordBtn)
         
-        remote.delegate?.setRemoteDirection(up: HomeScreen(), down: HomeScreen(), left: HomeScreen(), right: HomeScreen(), middle: HomeScreen())
-        
+      
+ //       banner?.createBannerWithText(text: "log in")
         
     }
+    
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         nameTextField.resignFirstResponder()

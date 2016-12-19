@@ -15,11 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         FIRApp.configure()
+
+        window = UIWindow.init(frame: UIScreen.main.bounds)
         
+<<<<<<< HEAD
         window = UIWindow.init(frame: UIScreen.main.bounds)
         
         let initialView = CameraVC()
@@ -28,6 +34,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
+=======
+        let initialView = storyboard.instantiateViewController(withIdentifier: "ManagerVC") as! PoplurScreenManager
+            
+        window?.rootViewController = initialView
+        window?.makeKeyAndVisible()
+
+ 
+>>>>>>> c472096a3d98d68f84af562ff6d4ea696e495158
         return true
     }
 

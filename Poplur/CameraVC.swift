@@ -13,7 +13,11 @@ import FirebaseDatabase
 import FirebaseAuth
 import Photos
 
+<<<<<<< HEAD
 class CameraVC: CameraViewController {
+=======
+class CameraVC: PoplurScreen {
+>>>>>>> c472096a3d98d68f84af562ff6d4ea696e495158
     
 //    var movieFileOutput: AVCaptureMovieFileOutput? = nila
     
@@ -31,9 +35,21 @@ class CameraVC: CameraViewController {
 */
     var _videoURL: URL?
     
+<<<<<<< HEAD
     override func viewDidLoad() {
+=======
+    weak var assetdelegate: AssetUploadingDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.name = PoplurScreenName.camera
         
-        delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+>>>>>>> c472096a3d98d68f84af562ff6d4ea696e495158
+        
+        assetdelegate = self
         
         _previewView = previewView
         

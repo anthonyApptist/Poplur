@@ -66,9 +66,9 @@ class CircleButton: UIButton {
     }
     
     func addText(string: String, color: Int) {
-        self.titleLabel?.font = UIFont(name: "MyriadPro-Cond", size: 24.5)
+        self.titleLabel?.font = UIFont(name: "MyriadPro-Semibold", size: 20.5)
         self.setTitle(string, for: UIControlState.normal)
-        
+        self.setSpacing(space: 0.1)
         if(color == 0) {
                 self.setTitleColor(UIColor.black, for: UIControlState.normal)
         } else {
@@ -84,25 +84,18 @@ class CircleButton: UIButton {
    private func playSound(){
         
         let poppingSound = URL(fileURLWithPath: Bundle.main.path(forResource: "pop", ofType: "mp3")!)
-        
-        
+    
         do {
-            
         audioPlayer = try AVAudioPlayer(contentsOf: poppingSound)
-            
         audioPlayer.prepareToPlay()
-            
         audioPlayer.setVolume(0.1, fadeDuration: 0.1)
-            
         audioPlayer.play()
-            
       } catch {
-            
             print("Error getting the audio file")
-            
       }
-        
     }
+    
+    
 
 
 }
