@@ -45,12 +45,14 @@ class LogInScreen: PoplurScreen {
         nameTextField = UITextField(frame: CGRect(x: 134.4, y: 89.5, width: 215.6, height: 36.6))
         nameTextField.addBorder()
         nameTextField.layer.cornerRadius = 5.1
+        nameTextField.contentVerticalAlignment = .center
         nameTextField.layer.backgroundColor = UIColor.white.cgColor
         self.view.addSubview(nameTextField)
         
         pwTextField = UITextField(frame: CGRect(x:134.4, y:201.5, width: 215.6, height: 36.6))
         pwTextField.addBorder()
         pwTextField.layer.cornerRadius = 5.1
+        pwTextField.contentVerticalAlignment = .center
         pwTextField.layer.backgroundColor = UIColor.white.cgColor
         self.view.addSubview(pwTextField)
         
