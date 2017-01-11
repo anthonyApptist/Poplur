@@ -1,3 +1,4 @@
+/*
 //
 //  ViewController.swift
 //  DevChat
@@ -13,13 +14,9 @@ import FirebaseDatabase
 import FirebaseAuth
 import Photos
 
-<<<<<<< HEAD
 class CameraVC: CameraViewController {
-=======
-class CameraVC: PoplurScreen {
->>>>>>> c472096a3d98d68f84af562ff6d4ea696e495158
     
-//    var movieFileOutput: AVCaptureMovieFileOutput? = nila
+//    var movieFileOutput: AVCaptureMovieFileOutput? = nil
     
     var previewView = PreviewView()
  
@@ -35,32 +32,25 @@ class CameraVC: PoplurScreen {
 */
     var _videoURL: URL?
     
-<<<<<<< HEAD
     override func viewDidLoad() {
-=======
+    super.viewDidLoad()
     weak var assetdelegate: AssetUploadingDelegate?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+        
         self.name = PoplurScreenName.camera
         
     }
-    
     override func viewDidAppear(_ animated: Bool) {
->>>>>>> c472096a3d98d68f84af562ff6d4ea696e495158
-        
-        assetdelegate = self
+    
+     assetdelegate = self
         
         _previewView = previewView
         
-        super.viewDidLoad()
         
-//        cameraAuthorization()
+        //        cameraAuthorization()
         
 //        videoOutputSetup()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+        
     /*
         changeCameraButton = UIButton.init(frame: CGRect(x: 15, y: 15, width: 100, height: 100))
         
@@ -221,3 +211,4 @@ extension CameraVC: AssetUploadingDelegate {
     
 }
 
+*/
