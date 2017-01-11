@@ -18,6 +18,8 @@ class DataService {
         return _instance
     }
     
+    //MARK: Database
+    
     var mainRef: FIRDatabaseReference {
         return FIRDatabase.database().reference()
     }
@@ -34,17 +36,19 @@ class DataService {
         return mainRef.child("musicVideos")
     }
     
+    func saveMusicRegisterUser(uid: String, email: String, name: String) {
+        let profile: Dictionary<String, AnyObject> = ["email": email as AnyObject, "name": name as AnyObject, "likes": 0 as AnyObject]
+        musicVideosRef.child(uid).setValue(profile)
+    }
+    
+    // MARK: Storage
+    
     var mainStorageRef: FIRStorageReference {
         return FIRStorage.storage().reference(forURL: "gs://poplurdemo.appspot.com")
     }
     
     var artistVideosStorageRef: FIRStorageReference {
         return mainStorageRef.child("ArtistVideos")
-    }
-    
-    func saveMusicRegisterUser(uid: String, email: String, name: String) {
-        let profile: Dictionary<String, AnyObject> = ["email": email as AnyObject, "name": name as AnyObject, "likes": 0 as AnyObject]
-        musicVideosRef.child(uid).setValue(profile)
     }
     
     func saveNewMusicVideo(videoID: String, downloadURL: URL, userUID: String) {

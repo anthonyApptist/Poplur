@@ -108,4 +108,15 @@ class AuthService {
         try! FIRAuth.auth()!.signOut()
     }
     
+    func passwordReset() {
+        let email = "user@example.com"
+        
+        FIRAuth.auth()?.sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                // An error happened.
+            } else {
+                // Password reset email sent.
+            }
+        }
+    }
 }

@@ -25,12 +25,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow.init(frame: UIScreen.main.bounds)
         
+<<<<<<< HEAD
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        
+        let initialView = CameraVC()
+        
+        window?.rootViewController = initialView
+        
+        window?.makeKeyAndVisible()
+        
+=======
         let initialView = storyboard.instantiateViewController(withIdentifier: "ManagerVC") as! PoplurScreenManager
             
         window?.rootViewController = initialView
         window?.makeKeyAndVisible()
 
  
+>>>>>>> c472096a3d98d68f84af562ff6d4ea696e495158
         return true
     }
 
