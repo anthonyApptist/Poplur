@@ -229,6 +229,10 @@
         <scene sceneID="h9g-Z6-ZBc">
             <objects>
                 <viewController storyboardIdentifier="ManagerVC" title="CurrentVC" id="Xof-T9-y9b" customClass="PoplurScreenManager" customModule="Poplur" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bn6-3C-Nt0"/>
+                        <viewControllerLayoutGuide type="bottom" id="6xH-4s-fE5"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="CurrentVC" id="Qpj-zd-pB3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,10 +273,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WNy-Rk-WxM"/>
-        <segue reference="Gjb-kL-XB1"/>
         <segue reference="P1q-fL-d53"/>
-        <segue reference="2Dq-s2-Ndi"/>
-        <segue reference="Dau-WJ-L6b"/>
+        <segue reference="06U-P7-LDe"/>
+        <segue reference="5eF-0R-miO"/>
+        <segue reference="2sQ-YS-9XY"/>
+        <segue reference="qcC-dU-VtD"/>
     </inferredMetricsTieBreakers>
 </document>
