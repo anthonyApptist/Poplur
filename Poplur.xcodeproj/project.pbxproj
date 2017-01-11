@@ -16,7 +16,6 @@
 		663646871DE2E9B000E6D719 /* forgotPw@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 663646851DE2E9B000E6D719 /* forgotPw@3x.png */; };
 		666EB7B71DD812F100F67EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666EB7B61DD812F100F67EC3 /* AppDelegate.swift */; };
 		666EB7B91DD812F100F67EC3 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666EB7B81DD812F100F67EC3 /* HomeScreen.swift */; };
-		666EB7BC1DD812F100F67EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666EB7BA1DD812F100F67EC3 /* Main.storyboard */; };
 		666EB7BE1DD812F100F67EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666EB7BD1DD812F100F67EC3 /* Assets.xcassets */; };
 		666EB7C11DD812F100F67EC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666EB7BF1DD812F100F67EC3 /* LaunchScreen.storyboard */; };
 		666EB7CE1DD8137A00F67EC3 /* apptist logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 666EB7C81DD8137A00F67EC3 /* apptist logo.png */; };
@@ -64,11 +63,11 @@
 		66705F851E26CE760040939A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66705F7A1E26CE760040939A /* Icon@2x.png */; };
 		668720081DE9116300696140 /* UIBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668720071DE9116300696140 /* UIBannerView.swift */; };
 		66ADCB011E05C5C6007B331D /* PoplurScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ADCB001E05C5C6007B331D /* PoplurScreenManager.swift */; };
+		66FEE8141E26D95D001C3B2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FEE8131E26D95D001C3B2F /* Main.storyboard */; };
+		66FEE8161E26DA6A001C3B2F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE8151E26DA6A001C3B2F /* CameraViewController.swift */; };
+		66FEE8181E26DA75001C3B2F /* CameraVCCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE8171E26DA75001C3B2F /* CameraVCCopy.swift */; };
 		926238C8C5D31F027D6515AA /* Pods_Poplur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D31A36889BA5C96D6F9467 /* Pods_Poplur.framework */; };
 		9298DE261DE3B25600A4598F /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298DE251DE3B25600A4598F /* CameraVC.swift */; };
-		92ACE8301DE76B2100D712FB /* AAPLCameraFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACE82F1DE76B2100D712FB /* AAPLCameraFunctions.swift */; };
-		92ACE8321DE76B2D00D712FB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACE8311DE76B2D00D712FB /* CameraViewController.swift */; };
-		92B4A6181DE7D83B00F35DED /* CameraVCCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4A6171DE7D83B00F35DED /* CameraVCCopy.swift */; };
 		92F4B8771DE533D500048EB2 /* AssetUploadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B8761DE533D500048EB2 /* AssetUploadingDelegate.swift */; };
 		92F4B8791DE533E900048EB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B8781DE533E900048EB2 /* User.swift */; };
 		92F4B87B1DE533FD00048EB2 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B87A1DE533FD00048EB2 /* PreviewView.swift */; };
@@ -91,7 +90,6 @@
 		666EB7B31DD812F100F67EC3 /* Poplur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poplur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666EB7B61DD812F100F67EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		666EB7B81DD812F100F67EC3 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		666EB7BB1DD812F100F67EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		666EB7BD1DD812F100F67EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		666EB7C01DD812F100F67EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		666EB7C21DD812F100F67EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,10 +138,10 @@
 		66705F7A1E26CE760040939A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		668720071DE9116300696140 /* UIBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBannerView.swift; sourceTree = "<group>"; };
 		66ADCB001E05C5C6007B331D /* PoplurScreenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoplurScreenManager.swift; sourceTree = "<group>"; };
+		66FEE8131E26D95D001C3B2F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		66FEE8151E26DA6A001C3B2F /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		66FEE8171E26DA75001C3B2F /* CameraVCCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVCCopy.swift; sourceTree = "<group>"; };
 		9298DE251DE3B25600A4598F /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
-		92ACE82F1DE76B2100D712FB /* AAPLCameraFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPLCameraFunctions.swift; sourceTree = "<group>"; };
-		92ACE8311DE76B2D00D712FB /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		92B4A6171DE7D83B00F35DED /* CameraVCCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVCCopy.swift; sourceTree = "<group>"; };
 		92F4B8761DE533D500048EB2 /* AssetUploadingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetUploadingDelegate.swift; sourceTree = "<group>"; };
 		92F4B8781DE533E900048EB2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		92F4B87A1DE533FD00048EB2 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
@@ -189,9 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				666EB7B81DD812F100F67EC3 /* HomeScreen.swift */,
-				92ACE8311DE76B2D00D712FB /* CameraViewController.swift */,
-				9298DE251DE3B25600A4598F /* CameraVC.swift */,
-				92B4A6191DE7D87100F35DED /* CameraWork */,
 				6636467B1DE26AF400E6D719 /* LogInScreen.swift */,
 				9298DE251DE3B25600A4598F /* CameraVC.swift */,
 				663646801DE2E6CE00E6D719 /* SignUpScreen.swift */,
@@ -203,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				666EB7BF1DD812F100F67EC3 /* LaunchScreen.storyboard */,
-				666EB7BA1DD812F100F67EC3 /* Main.storyboard */,
+				66FEE8131E26D95D001C3B2F /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -259,6 +254,8 @@
 		666EB7DE1DD8518600F67EC3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				66FEE8171E26DA75001C3B2F /* CameraVCCopy.swift */,
+				66FEE8151E26DA6A001C3B2F /* CameraViewController.swift */,
 				92F4B87E1DE5344400048EB2 /* AfterPostView.swift */,
 				92F4B87A1DE533FD00048EB2 /* PreviewView.swift */,
 				92F4B87C1DE5342100048EB2 /* PhotoCaptureDelegate.swift */,
@@ -326,13 +323,6 @@
 			);
 			name = iPhone;
 			path = icons/iPhone/iPhone;
-		92B4A6191DE7D87100F35DED /* CameraWork */ = {
-			isa = PBXGroup;
-			children = (
-				92B4A6171DE7D83B00F35DED /* CameraVCCopy.swift */,
-				92ACE82F1DE76B2100D712FB /* AAPLCameraFunctions.swift */,
-			);
-			name = CameraWork;
 			sourceTree = "<group>";
 		};
 		A2295548DB6DB220CAD32D42 /* Pods */ = {
@@ -426,6 +416,7 @@
 				666EB8271DD98A3200F67EC3 /* leftarrow.png in Resources */,
 				666EB80D1DD9605700F67EC3 /* bitmap.png in Resources */,
 				666EB8321DD98A4500F67EC3 /* rightarrow@3x.png in Resources */,
+				66FEE8141E26D95D001C3B2F /* Main.storyboard in Resources */,
 				666EB8281DD98A3200F67EC3 /* leftarrow@2x.png in Resources */,
 				666EB8251DD98A3200F67EC3 /* downarrow@2x.png in Resources */,
 				663646861DE2E9B000E6D719 /* forgotPw@2x.png in Resources */,
@@ -453,7 +444,6 @@
 				666EB7F91DD95C7D00F67EC3 /* apptist logo.png in Resources */,
 				66705F831E26CE760040939A /* Icon-Small@3x.png in Resources */,
 				666EB8231DD98A3200F67EC3 /* combinedShape@3x.png in Resources */,
-				666EB7BC1DD812F100F67EC3 /* Main.storyboard in Resources */,
 				666EB8311DD98A4500F67EC3 /* rightarrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,37 +507,28 @@
 				668720081DE9116300696140 /* UIBannerView.swift in Sources */,
 				92F4B87F1DE5344400048EB2 /* AfterPostView.swift in Sources */,
 				666EB7B91DD812F100F67EC3 /* HomeScreen.swift in Sources */,
-				92ACE8301DE76B2100D712FB /* AAPLCameraFunctions.swift in Sources */,
 				9298DE261DE3B25600A4598F /* CameraVC.swift in Sources */,
 				92F4B87D1DE5342100048EB2 /* PhotoCaptureDelegate.swift in Sources */,
 				666EB7E61DD94C3400F67EC3 /* PoplurRemote.swift in Sources */,
 				666EB7B71DD812F100F67EC3 /* AppDelegate.swift in Sources */,
 				663646811DE2E6CE00E6D719 /* SignUpScreen.swift in Sources */,
 				92FD3EB31DE531C8009341C9 /* DataService.swift in Sources */,
+				66FEE8181E26DA75001C3B2F /* CameraVCCopy.swift in Sources */,
 				666EB7E01DD851A000F67EC3 /* CircleButton.swift in Sources */,
-				92B4A6181DE7D83B00F35DED /* CameraVCCopy.swift in Sources */,
 				66ADCB011E05C5C6007B331D /* PoplurScreenManager.swift in Sources */,
 				666EB7E41DD94BA600F67EC3 /* PoplurScreen.swift in Sources */,
 				92F4B87B1DE533FD00048EB2 /* PreviewView.swift in Sources */,
 				92FD3EB11DE531B3009341C9 /* AuthService.swift in Sources */,
 				92F4B8771DE533D500048EB2 /* AssetUploadingDelegate.swift in Sources */,
+				66FEE8161E26DA6A001C3B2F /* CameraViewController.swift in Sources */,
 				666EB8171DD966F800F67EC3 /* UIExtensions.swift in Sources */,
 				6636467C1DE26AF400E6D719 /* LogInScreen.swift in Sources */,
-				92ACE8321DE76B2D00D712FB /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		666EB7BA1DD812F100F67EC3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				666EB7BB1DD812F100F67EC3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		666EB7BF1DD812F100F67EC3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

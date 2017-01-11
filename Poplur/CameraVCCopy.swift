@@ -51,9 +51,9 @@ class CameraVCCopy: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cameraAuthorization()
+    //    cameraAuthorization()
         
-        videoOutputSetup()
+   //     videoOutputSetup()
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+<customFonts key="customFonts">
+<array key="Myriad-Pro-Semibold_31650.ttf">
+<string>MyriadPro-Semibold</string>
+</array>
+</customFonts>
+<scenes>
+<!--Log In Screen-->
+<scene sceneID="fWv-BH-cN3">
+<objects>
+<viewController storyboardIdentifier="LogInScreen" id="TWX-P4-meI" customClass="LogInScreen" customModule="Poplur" customModuleProvider="target" sceneMemberID="viewController">
+<layoutGuides>
+<viewControllerLayoutGuide type="top" id="5ym-pl-CHq"/>
+<viewControllerLayoutGuide type="bottom" id="mGe-o9-dNC"/>
+</layoutGuides>
+<view key="view" contentMode="scaleToFill" id="kIw-fy-6pl">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+</view>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="ipj-98-hfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="796" y="-541"/>
+</scene>
+<!--LeftVC-->
+<scene sceneID="sg3-2t-rkR">
+<objects>
+<viewController title="LeftVC" id="iBx-NQ-ojJ" customClass="PoplurScreenManager" customModule="Poplur" customModuleProvider="target" sceneMemberID="viewController">
+<layoutGuides>
+<viewControllerLayoutGuide type="top" id="8si-Ia-u6G"/>
+<viewControllerLayoutGuide type="bottom" id="j8p-fV-vth"/>
+</layoutGuides>
+<view key="view" contentMode="scaleToFill" id="4hW-9P-ABZ">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehD-Fm-5Ig">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<constraints>
+<constraint firstAttribute="width" secondItem="ehD-Fm-5Ig" secondAttribute="height" multiplier="375:667" id="7ft-JW-Kcu"/>
+</constraints>
+</containerView>
+</subviews>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<constraints>
+<constraint firstItem="j8p-fV-vth" firstAttribute="top" secondItem="ehD-Fm-5Ig" secondAttribute="bottom" id="6sR-uZ-gZZ"/>
+<constraint firstItem="ehD-Fm-5Ig" firstAttribute="leading" secondItem="4hW-9P-ABZ" secondAttribute="leading" id="I2t-E0-QwZ"/>
+<constraint firstAttribute="trailing" secondItem="ehD-Fm-5Ig" secondAttribute="trailing" id="gKj-Ig-feG"/>
+<constraint firstItem="ehD-Fm-5Ig" firstAttribute="top" secondItem="4hW-9P-ABZ" secondAttribute="top" id="iby-gf-Yg4"/>
+</constraints>
+</view>
+<connections>
+<outlet property="containerView" destination="ehD-Fm-5Ig" id="aRT-EN-i5I"/>
+<segue destination="Xof-T9-y9b" kind="show" identifier="transitionLeft" animates="NO" id="Jlb-Dv-Nje"/>
+<segue destination="g9Y-ca-ODh" kind="show" identifier="transitionRight" animates="NO" id="NX3-Gx-O0g"/>
+<segue destination="Cqq-2q-vIV" kind="show" identifier="transitionDown" animates="NO" id="9cq-sW-alt"/>
+<segue destination="IB2-MQ-uEe" kind="show" identifier="transitionMiddle" animates="NO" id="UM7-aN-kpO"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="FFf-hA-NkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="578" y="931"/>
+</scene>
+<!--RightVC-->
+<scene sceneID="WF0-Nm-1mL">
+<objects>
+<viewController title="RightVC" id="g9Y-ca-ODh" customClass="PoplurScreenManager" customModule="Poplur" customModuleProvider="target" sceneMemberID="viewController">
+<layoutGuides>
+<viewControllerLayoutGuide type="top" id="xnZ-Ng-DTG"/>
+<viewControllerLayoutGuide type="bottom" id="bNc-Nv-utW"/>
+</layoutGuides>
+<view key="view" contentMode="scaleToFill" id="Hwu-bW-izE">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IuF-dr-70E">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<constraints>
+<constraint firstAttribute="width" secondItem="IuF-dr-70E" secondAttribute="height" multiplier="375:667" id="shi-FC-myh"/>
+</constraints>
+</containerView>
+</subviews>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<constraints>
+<constraint firstItem="IuF-dr-70E" firstAttribute="leading" secondItem="Hwu-bW-izE" secondAttribute="leading" id="Yi8-cg-h6L"/>
+<constraint firstItem="bNc-Nv-utW" firstAttribute="top" secondItem="IuF-dr-70E" secondAttribute="bottom" id="ufl-80-IQQ"/>
+<constraint firstItem="IuF-dr-70E" firstAttribute="top" secondItem="Hwu-bW-izE" secondAttribute="top" id="vfj-uY-f6o"/>
+<constraint firstAttribute="trailing" secondItem="IuF-dr-70E" secondAttribute="trailing" id="y2b-ys-JEh"/>
+</constraints>
+</view>
+<connections>
+<outlet property="containerView" destination="IuF-dr-70E" id="Pa7-ho-kcD"/>
+<segue destination="Cqq-2q-vIV" kind="show" identifier="transitionLeft" animates="NO" id="b1W-da-91H"/>
+<segue destination="Xof-T9-y9b" kind="show" identifier="transitionRight" animates="NO" id="z1v-mq-3r1"/>
+<segue destination="iBx-NQ-ojJ" kind="show" identifier="transitionDown" animates="NO" id="YkM-bC-ib5"/>
+<segue destination="IB2-MQ-uEe" kind="show" identifier="transitionMiddle" animates="NO" id="ndo-mX-wVb"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="EZ7-Ge-qkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="2790" y="931"/>
+</scene>
+<!--MiddleVC-->
+<scene sceneID="gVf-vx-7oG">
+<objects>
+<viewController title="MiddleVC" id="IB2-MQ-uEe" customClass="PoplurScreenManager" customModule="Poplur" customModuleProvider="target" sceneMemberID="viewController">
+<layoutGuides>
+<viewControllerLayoutGuide type="top" id="VHM-KP-Ls3"/>
+<viewControllerLayoutGuide type="bottom" id="TZu-yg-DC0"/>
+</layoutGuides>
+<view key="view" contentMode="scaleToFill" id="h4U-eU-bZE">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xB0-tk-5GB">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<constraints>
+<constraint firstAttribute="width" secondItem="xB0-tk-5GB" secondAttribute="height" multiplier="375:667" id="MLB-aR-7jG"/>
+</constraints>
+</containerView>
+</subviews>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<constraints>
+<constraint firstItem="TZu-yg-DC0" firstAttribute="top" secondItem="xB0-tk-5GB" secondAttribute="bottom" id="dZ7-H5-CSU"/>
+<constraint firstItem="xB0-tk-5GB" firstAttribute="top" secondItem="h4U-eU-bZE" secondAttribute="top" id="mhm-i7-3wg"/>
+<constraint firstItem="xB0-tk-5GB" firstAttribute="leading" secondItem="h4U-eU-bZE" secondAttribute="leading" id="rbx-e3-jgz"/>
+<constraint firstAttribute="trailing" secondItem="xB0-tk-5GB" secondAttribute="trailing" id="vqz-dO-Uaq"/>
+</constraints>
+</view>
+<connections>
+<outlet property="containerView" destination="xB0-tk-5GB" id="lxc-D4-nty"/>
+<segue destination="iBx-NQ-ojJ" kind="show" identifier="transitionLeft" animates="NO" id="2sQ-YS-9XY"/>
+<segue destination="Cqq-2q-vIV" kind="show" identifier="transitionDown" animates="NO" id="qcC-dU-VtD"/>
+<segue destination="g9Y-ca-ODh" kind="show" identifier="transitionRight" animates="NO" id="5eF-0R-miO"/>
+<segue destination="Xof-T9-y9b" kind="show" identifier="transitionMiddle" animates="NO" id="06U-P7-LDe"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="jtE-0Z-ldY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="1734" y="931"/>
+</scene>
+<!--DownVC-->
+<scene sceneID="7dV-wb-UAv">
+<objects>
+<viewController title="DownVC" id="Cqq-2q-vIV" customClass="PoplurScreenManager" customModule="Poplur" customModuleProvider="target" sceneMemberID="viewController">
+<layoutGuides>
+<viewControllerLayoutGuide type="top" id="8dm-Yq-Uke"/>
+<viewControllerLayoutGuide type="bottom" id="MCh-69-scy"/>
+</layoutGuides>
+<view key="view" contentMode="scaleToFill" id="FVw-Qu-Wi6">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1WY-9x-rA5">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<constraints>
+<constraint firstAttribute="width" secondItem="1WY-9x-rA5" secondAttribute="height" multiplier="375:667" id="tKV-5N-UOi"/>
+</constraints>
+</containerView>
+</subviews>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<constraints>
+<constraint firstItem="1WY-9x-rA5" firstAttribute="top" secondItem="FVw-Qu-Wi6" secondAttribute="top" id="Djw-et-5Q5"/>
+<constraint firstAttribute="trailing" secondItem="1WY-9x-rA5" secondAttribute="trailing" id="HF4-UT-nOg"/>
+<constraint firstItem="1WY-9x-rA5" firstAttribute="leading" secondItem="FVw-Qu-Wi6" secondAttribute="leading" id="T5x-XA-sQ4"/>
+<constraint firstItem="MCh-69-scy" firstAttribute="top" secondItem="1WY-9x-rA5" secondAttribute="bottom" id="jp4-EK-rq4"/>
+</constraints>
+</view>
+<connections>
+<outlet property="containerView" destination="1WY-9x-rA5" id="CTc-Gi-9yG"/>
+<segue destination="g9Y-ca-ODh" kind="show" identifier="transitionLeft" animates="NO" id="X5g-MR-cev"/>
+<segue destination="Xof-T9-y9b" kind="show" identifier="transitionRight" animates="NO" id="Gjb-kL-XB1"/>
+<segue destination="iBx-NQ-ojJ" kind="show" identifier="transitionDown" animates="NO" id="uzv-S8-4Xe"/>
+<segue destination="IB2-MQ-uEe" kind="show" identifier="transitionMiddle" animates="NO" id="F5z-GJ-qLd"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="nfG-wA-ndQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="1736.8" y="1642.128935532234"/>
+</scene>
+<!--Sign Up Screen-->
+<scene sceneID="Vyu-Wd-OA4">
+<objects>
+<viewController storyboardIdentifier="SignUpVC" id="Joa-rs-Z8Z" customClass="SignUpScreen" customModule="Poplur" customModuleProvider="target" sceneMemberID="viewController">
+<layoutGuides>
+<viewControllerLayoutGuide type="top" id="qXT-yM-igs"/>
+<viewControllerLayoutGuide type="bottom" id="aQm-xz-xTB"/>
+</layoutGuides>
+<view key="view" contentMode="scaleToFill" id="kIF-u6-OZh">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+</view>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="3vb-ZS-UU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="1734" y="-541"/>
+</scene>
+<!--Home Screen-->
+<scene sceneID="HYC-Wt-iIj">
+<objects>
+<viewController storyboardIdentifier="HomeVC" id="JJy-lQ-RCu" customClass="HomeScreen" customModule="Poplur" customModuleProvider="target" sceneMemberID="viewController">
+<layoutGuides>
+<viewControllerLayoutGuide type="top" id="wvX-bz-0VZ"/>
+<viewControllerLayoutGuide type="bottom" id="ldo-SN-wY1"/>
+</layoutGuides>
+<view key="view" contentMode="scaleToFill" id="GDQ-q9-Lla">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+</view>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="IGH-bK-k23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="2620" y="-541"/>
+</scene>
+<!--CurrentVC-->
+<scene sceneID="h9g-Z6-ZBc">
+<objects>
+<viewController storyboardIdentifier="ManagerVC" title="CurrentVC" id="Xof-T9-y9b" customClass="PoplurScreenManager" customModule="Poplur" customModuleProvider="target" sceneMemberID="viewController">
+<layoutGuides>
+<viewControllerLayoutGuide type="top" id="bn6-3C-Nt0"/>
+<viewControllerLayoutGuide type="bottom" id="6xH-4s-fE5"/>
+</layoutGuides>
+<view key="view" contentMode="scaleToFill" restorationIdentifier="CurrentVC" id="Qpj-zd-pB3">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2S0-Qs-naI">
+<rect key="frame" x="269" y="446" width="42" height="21"/>
+<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+<fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="17"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+<containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQR-MC-22X">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<constraints>
+<constraint firstAttribute="width" secondItem="tQR-MC-22X" secondAttribute="height" multiplier="375:667" id="TMl-Po-8VL"/>
+</constraints>
+</containerView>
+</subviews>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<constraints>
+<constraint firstAttribute="trailing" secondItem="tQR-MC-22X" secondAttribute="trailing" id="EVr-76-d1J"/>
+<constraint firstAttribute="bottom" secondItem="tQR-MC-22X" secondAttribute="bottom" id="G6h-7a-mn3"/>
+<constraint firstItem="tQR-MC-22X" firstAttribute="leading" secondItem="Qpj-zd-pB3" secondAttribute="leading" id="Gub-XN-cTk"/>
+<constraint firstItem="tQR-MC-22X" firstAttribute="top" secondItem="Qpj-zd-pB3" secondAttribute="top" id="n5c-QE-VBP"/>
+</constraints>
+</view>
+<connections>
+<outlet property="containerView" destination="tQR-MC-22X" id="b9R-tH-A3o"/>
+<segue destination="g9Y-ca-ODh" kind="show" identifier="transitionRight" animates="NO" id="2Dq-s2-Ndi"/>
+<segue destination="iBx-NQ-ojJ" kind="show" identifier="transitionLeft" animates="NO" id="Dau-WJ-L6b"/>
+<segue destination="Cqq-2q-vIV" kind="show" identifier="transitionDown" animates="NO" id="WNy-Rk-WxM"/>
+<segue destination="IB2-MQ-uEe" kind="show" identifier="transitionMiddle" animates="NO" id="P1q-fL-d53"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="Kub-Sy-fGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="1734" y="250"/>
+</scene>
+</scenes>
+<inferredMetricsTieBreakers>
+<segue reference="P1q-fL-d53"/>
+<segue reference="06U-P7-LDe"/>
+<segue reference="5eF-0R-miO"/>
+<segue reference="2sQ-YS-9XY"/>
+<segue reference="qcC-dU-VtD"/>
+</inferredMetricsTieBreakers>
+</document>
