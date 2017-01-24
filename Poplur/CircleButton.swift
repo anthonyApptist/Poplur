@@ -13,12 +13,14 @@ import AVFoundation
 class CircleButton: UIButton {
     
     var audioPlayer: AVAudioPlayer!
-    
+        
    required override init(frame: CGRect) {
         super.init(frame: frame)
         let radius = self.frame.width/2
         self.layer.cornerRadius = radius
         self.clipsToBounds = true
+
+
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -45,6 +47,23 @@ class CircleButton: UIButton {
         })
     }
     
+    func animateWithNewImage(scale: CGFloat, soundOn: Bool, image: UIImage) {
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            if(soundOn) {
+                self.playSound()
+            }
+            self.transform = CGAffineTransform.identity.scaledBy(x: scale, y: scale)
+            
+        }, completion: { (finish) in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.transform = CGAffineTransform.identity
+                self.setImage(image, for: .normal)
+            })
+        })
+        
+    }
+    
     func setColorRed() {
         self.backgroundColor = UIColor.init(red: 212/255, green: 107/255, blue: 107/255, alpha: 1.0)
     }
@@ -65,6 +84,14 @@ class CircleButton: UIButton {
         self.backgroundColor = UIColor.init(red: 216/255, green: 216/255, blue: 216/255, alpha: 0.80)
     }
     
+    func setColourWhite() {
+        self.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+    }
+    
+    func setColourVerifiedGreen() {
+        self.backgroundColor = UIColor.init(red: 0/255, green: 203/255, blue: 9/255, alpha: 1.0)
+    }
+    
     func addText(string: String, color: Int) {
         self.titleLabel?.font = UIFont(name: "MyriadPro-Semibold", size: 20.5)
         self.setTitle(string, for: UIControlState.normal)
@@ -79,6 +106,22 @@ class CircleButton: UIButton {
     func addBorder() {
         self.layer.borderWidth = 2.88
         self.layer.borderColor = UIColor.black.cgColor
+    }
+    
+    func turnOff() {
+        
+        UIView.animate(withDuration: 0.5) { 
+            self.alpha = 0.1
+            self.isUserInteractionEnabled = false
+        }
+        
+    }
+    
+    func turnOn() {
+        UIView.animate(withDuration: 0.5) {
+            self.alpha = 1.0
+            self.isUserInteractionEnabled = true
+        }
     }
     
    private func playSound(){

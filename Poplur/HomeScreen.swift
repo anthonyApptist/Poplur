@@ -12,19 +12,27 @@ class HomeScreen: PoplurScreen {
     
     @IBAction func loginBtnPressed(_ sender: AnyObject) {
         
-        present(LogInScreen(), animated: false, completion: nil)
+        currentState = remoteStates[5]
+        print("remote state is: " + currentState)
+        NotificationCenter.default.post(name: myNotification, object: nil, userInfo: ["message": currentState])
     }
     
     @IBAction func signUpBtnPressed(_ sender: AnyObject) {
         
-        present(SignUpScreen(), animated: false, completion: nil)
+        currentState = remoteStates[6]
+        print("remote state is: " + currentState)
+        NotificationCenter.default.post(name: myNotification, object: nil, userInfo: ["message": currentState])
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.name = PoplurScreenName.home
-        self.setScreenDirections(current: self, left: LogInScreen(), right: LogInScreen(), down: LogInScreen(), middle: LogInScreen())
+        self.setScreenDirections(current: self, leftScreen: nil, rightScreen: nil, downScreen: nil, middleScreen: nil, upScreen: nil)
+        self.setRemoteEnabled(leftFunc: true, rightFunc: true, downFunc: true, middleFunc: true, upFunc: true)
+        self.remote.middleBtn?.animateWithNewImage(scale: 1.2, soundOn: false, image: self.remote.middleBtnArrow!)
+
     }
+
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,7 +43,7 @@ class HomeScreen: PoplurScreen {
             let poplurLogo = CircleButton(frame: CGRect(x: 109, y: 82, width: 92, height: 88))
             poplurLogo.addBorder()
             poplurLogo.animateRadius(scale: 1.5, soundOn: true)
-            poplurLogo.setColorClear()
+            poplurLogo.setColourWhite()
             poplurLogo.addText(string: "poplur", color: 0)
             self.view.addSubview(poplurLogo)
             
@@ -54,7 +62,7 @@ class HomeScreen: PoplurScreen {
             let poplurChannel = CircleButton(frame: CGRect(x: 190.57, y: 72, width: 92, height: 88))
             poplurChannel.addBorder()
             poplurChannel.animateRadius(scale: 1.5, soundOn: true)
-            poplurChannel.setColorClear()
+            poplurChannel.setColourWhite()
             poplurChannel.addText(string: "Music", color: 1)
             self.view.addSubview(poplurChannel)
             
@@ -73,7 +81,7 @@ class HomeScreen: PoplurScreen {
             let loginBtn = CircleButton(frame: CGRect(x: 109, y:360, width: 92, height: 88))
             loginBtn.addBorder()
             loginBtn.animateRadius(scale: 1.5, soundOn: true)
-            loginBtn.setColorClear()
+            loginBtn.setColourWhite()
             loginBtn.addText(string: "login", color: 0)
             loginBtn.addTarget(self, action: #selector(self.loginBtnPressed(_:)), for: .touchUpInside)
             self.view.addSubview(loginBtn)
@@ -92,7 +100,7 @@ class HomeScreen: PoplurScreen {
             let signUpBtn = CircleButton(frame: CGRect(x:190.57, y: 350.7, width:92, height: 88))
             signUpBtn.addBorder()
             signUpBtn.animateRadius(scale: 1.5, soundOn: true)
-            signUpBtn.setColorClear()
+            signUpBtn.setColourWhite()
             signUpBtn.addText(string: "signup", color: 1)
             signUpBtn.addTarget(self, action: #selector(self.signUpBtnPressed(_:)), for: .touchUpInside)
             self.view.addSubview(signUpBtn)
