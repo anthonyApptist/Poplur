@@ -16,7 +16,7 @@ class PoplurScreenManager: UIViewController {
     var currentVC: PoplurScreen!
     
     var initialSetup = true
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -48,6 +48,10 @@ class PoplurScreenManager: UIViewController {
             performSegue(withIdentifier: "transitionRight", sender: self)
         } else if currentState == remoteStates[4] {
             performSegue(withIdentifier: "transitionMiddle", sender: self)
+        } else if currentState == remoteStates[5] {
+            performSegue(withIdentifier: "transitionOther", sender: self)
+        } else if currentState == remoteStates[6] {
+            performSegue(withIdentifier: "transitionOther", sender: self)
         }
     }
     
@@ -62,6 +66,8 @@ class PoplurScreenManager: UIViewController {
               currentVC = (storyboard?.instantiateViewController(withIdentifier: "LogInVC")) as! LogInScreen
         case .signUp:
               currentVC = (storyboard?.instantiateViewController(withIdentifier: "SignUpVC")) as! SignUpScreen
+        case .profile:
+              currentVC = (storyboard?.instantiateViewController(withIdentifier: "ProfileVC")) as! ProfileScreen
         default: break
             
         }
@@ -74,6 +80,10 @@ class PoplurScreenManager: UIViewController {
    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+
+
         
         if segue.identifier == "transitionDown" {
             
@@ -105,7 +115,20 @@ class PoplurScreenManager: UIViewController {
             self.nextScreen = segue.destination as? PoplurScreenManager
             self.nextScreen?.currentVC = self.currentVC.middleVC
             self.nextScreen?.initialSetup = false
-
+            
+        }
+        
+        else if segue.identifier == "transitionOther" {
+            
+            //currentVC.middle
+            self.nextScreen = segue.destination as? PoplurScreenManager
+            if(currentState == remoteStates[5]) {
+            self.nextScreen?.currentVC = self.currentVC.logInVC
+            } else if(currentState == remoteStates[6]) {
+                self.nextScreen?.currentVC = self.currentVC.signUpVC
+            }
+            self.nextScreen?.initialSetup = false
+            
             
         }
      }

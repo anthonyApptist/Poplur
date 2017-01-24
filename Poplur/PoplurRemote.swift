@@ -8,7 +8,7 @@
 
 import UIKit
 
-let remoteStates = ["Up", "Down", "Left", "Right", "Middle"]
+let remoteStates = ["Up", "Down", "Left", "Right", "Middle", "LogIn", "SignUp"]
 var currentState: String = ""
 
 let myNotification = Notification.Name("Notification")
@@ -20,6 +20,8 @@ class PoplurRemote: UIView {
     var leftBtn: CircleButton?
     var rightBtn: CircleButton?
     var middleBtn: CircleButton?
+    
+    let middleBtnArrow = UIImage(named: "combinedShape")
     
     func upBtnPressed(_ sender: AnyObject) {
         currentState = remoteStates[0]
@@ -52,88 +54,108 @@ class PoplurRemote: UIView {
         NotificationCenter.default.post(name: myNotification, object: nil, userInfo: ["message": currentState])
     }
     
- 
     
-     func createLeftBtn() {
+    func createLeftBtn() -> CircleButton {
         
         leftBtn = CircleButton(frame: CGRect(x: 120, y: 546, width: 70.2, height: 67.1))
-        leftBtn?.isUserInteractionEnabled = true
         leftBtn?.setColorBlue()
         
         let leftBtnArrow = UIImage(named: "leftarrow")
         leftBtn?.setImage(leftBtnArrow, for: UIControlState.normal)
         leftBtn?.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0, 0)
         
-        leftBtn?.addTarget(self, action: #selector(self.leftBtnPressed(_:)), for: .touchUpInside)
+       
+        leftBtn?.turnOff()
+     
+              leftBtn?.isUserInteractionEnabled = true 
+              leftBtn?.addTarget(self, action: #selector(self.leftBtnPressed(_:)), for: .touchUpInside)
         
         leftBtn?.animateRadius(scale: 1.2, soundOn: false)
         self.addSubview(leftBtn!)
-
+        
+        return leftBtn!
         
     }
     
-     func createRightBtn() {
+    func createRightBtn() -> CircleButton {
         
         rightBtn = CircleButton(frame: CGRect(x: 185.2, y: 546, width: 70.2, height: 67.1))
-        rightBtn?.isUserInteractionEnabled = true
         rightBtn?.setColorRed()
         
         let rightBtnArrow = UIImage(named: "rightarrow")
         rightBtn?.setImage(rightBtnArrow, for: UIControlState.normal)
         rightBtn?.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0)
         
-        rightBtn?.addTarget(self, action: #selector(self.rightBtnPressed(_:)), for: .touchUpInside)
+       
+        rightBtn?.turnOff()
+     
+            rightBtn?.isUserInteractionEnabled = true
+            rightBtn?.addTarget(self, action: #selector(self.rightBtnPressed(_:)), for: .touchUpInside)
+ 
         
         rightBtn?.animateRadius(scale: 1.2, soundOn: false)
         self.addSubview(rightBtn!)
         
+        return rightBtn!
+        
     }
     
-     func createUpBtn() {
+    func createUpBtn() -> CircleButton {
         
         upBtn = CircleButton(frame: CGRect(x: 153.5, y: 511.5, width: 70.2, height: 67.1))
-        upBtn?.isUserInteractionEnabled = true
         upBtn?.setColorGreen()
         
         let upBtnArrow = UIImage(named: "uparrow")
         upBtn?.setImage(upBtnArrow, for: UIControlState.normal)
         upBtn?.imageEdgeInsets = UIEdgeInsetsMake(-30, 0, 0, 0)
         
-        upBtn?.addTarget(self, action: #selector(self.upBtnPressed(_:)), for: .touchUpInside)
+
+        upBtn?.turnOff()
+   
+            upBtn?.isUserInteractionEnabled = true
+            upBtn?.addTarget(self, action: #selector(self.upBtnPressed(_:)), for: .touchUpInside)
         
         upBtn?.animateRadius(scale: 1.2, soundOn: false)
         self.addSubview(upBtn!)
+        
+        return upBtn!
     }
     
-     func createDownBtn() {
+    func createDownBtn() -> CircleButton {
 
         downBtn = CircleButton(frame: CGRect(x: 153.5, y: 576, width: 70.2, height: 67.1))
-        downBtn?.isUserInteractionEnabled = true
         downBtn?.setColorOrange()
         
         let downBtnArrow = UIImage(named: "downarrow")
         downBtn?.setImage(downBtnArrow, for: UIControlState.normal)
         downBtn?.imageEdgeInsets = UIEdgeInsetsMake(30, 0, 0, 0)
         
+        downBtn?.turnOff()
+      
+        downBtn?.isUserInteractionEnabled = true
         downBtn?.addTarget(self, action: #selector(self.downBtnPressed(_:)), for: .touchUpInside)
+
         
         downBtn?.animateRadius(scale: 1.2, soundOn: false)
         self.addSubview(downBtn!)
+        
+        return downBtn!
     }
     
-     func createMiddleBtn() {
+    func createMiddleBtn() -> CircleButton {
         
         middleBtn = CircleButton(frame: CGRect(x: 153, y: 545, width: 70.2, height: 67.1))
-        middleBtn?.isUserInteractionEnabled = true
         middleBtn?.setColorClear()
         
-        let middleBtnArrow = UIImage(named: "combinedShape")
-        middleBtn?.setImage(middleBtnArrow, for: UIControlState.normal)
+        middleBtn?.turnOff()
+    
+        middleBtn?.isUserInteractionEnabled = true
+     //   middleBtn?.addTarget(self, action: #selector(self.middleBtnPressed(_:)), for: .touchUpInside)
+   
         
-        middleBtn?.addTarget(self, action: #selector(self.middleBtnPressed(_:)), for: .touchUpInside)
-        
-        middleBtn?.animateRadius(scale: 1.2, soundOn: false)
         self.addSubview(middleBtn!)
+        
+        return middleBtn!
     }
    
     
@@ -141,25 +163,27 @@ class PoplurRemote: UIView {
         
         super.init(frame: frame)
         
-        self.clipsToBounds = true 
+    }
+    
+    func createButtons() {
+        
+        self.clipsToBounds = true
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
-        self.createLeftBtn()
+            self.createLeftBtn()
         }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
-        self.createRightBtn()
+            self.createRightBtn()
         }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6) {
-        self.createUpBtn()
+            self.createUpBtn()
         }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
-        self.createDownBtn()
+            self.createDownBtn()
         }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
-        self.createMiddleBtn()
+            self.createMiddleBtn()
         }
-        
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
