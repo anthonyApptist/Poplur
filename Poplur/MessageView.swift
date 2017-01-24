@@ -18,7 +18,7 @@ class MessageView: UIView {
     var messageShow = false
     
     override init(frame: CGRect) {
-        super.init(frame: CGRect(x: 0, y: -70, width: 375, height: 90))
+        super.init(frame: CGRect(x: 0, y: -70, width: 375, height: 60))
         self.backgroundColor = UIColor.black
         startPositionY = self.layer.position.y
         self.messageContent = LabelCustomSpacing(frame: CGRect(x: 68, y: 16, width: 240, height: 38))

@@ -18,6 +18,8 @@ class LogInScreen: PoplurScreen {
     
     let checkMarkImg = UIImage(named: "checkmark")
     
+    var entered = false
+    
     
 
     override func viewDidLoad() {
@@ -81,6 +83,8 @@ class LogInScreen: PoplurScreen {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
+        ErrorHandler.sharedInstance.errorMessageView.resetImagePosition()
+        
         if(textField == nameTextField.textField) {
             self.usernameBtn.animateRadius(scale: 1.5, soundOn: false)
         }
@@ -91,6 +95,24 @@ class LogInScreen: PoplurScreen {
         
         
     }
+    
+    override func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        ErrorHandler.sharedInstance.errorMessageView.resetImagePosition()
+        textField.resignFirstResponder()
+        
+        
+        if !entered {
+            if nameTextField.textField.text?.isEmpty == false && pwTextField.textField.text?.isEmpty == false {
+                self.setRemoteEnabled(leftFunc: true, rightFunc: false, downFunc: false, middleFunc: true, upFunc: false)
+                self.remote.middleBtn?.setColourVerifiedGreen()
+                self.remote.middleBtn?.animateWithNewImage(scale: 1.2, soundOn: true, image: checkMarkImg!)
+                self.remote.middleBtn?.addTarget(self, action: #selector(self.loginButtonFunction(_:)), for: .touchUpInside)
+                entered = true
+            }
+        }
+    }
+    
     
     func validate(showError: Bool) -> Bool {
         ErrorHandler.sharedInstance.errorMessageView.resetImagePosition()
@@ -117,18 +139,8 @@ class LogInScreen: PoplurScreen {
         return true
     }
     
-    override func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        if nameTextField.textField.text?.isEmpty == false && pwTextField.textField.text?.isEmpty == false {
-            self.setRemoteEnabled(leftFunc: true, rightFunc: false, downFunc: false, middleFunc: true, upFunc: false)
-            self.remote.middleBtn?.setColourVerifiedGreen()
-            self.remote.middleBtn?.animateWithNewImage(scale: 1.2, soundOn: true, image: checkMarkImg!)
-            self.remote.middleBtn?.addTarget(self, action: #selector(self.loginButtonFunction(_:)), for: .touchUpInside)
-            
-        }
-    }
-    
-    
+
+
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         nameTextField.textField.resignFirstResponder()
