@@ -39,8 +39,14 @@ class UIBannerView: UIView {
         
         label.translatesAutoresizingMaskIntoConstraints = false
      
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0).isActive = true
+        label.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -10).isActive = true
         label.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0).isActive = true
+        
+        label.pinToLeft(view: self, margin: 10).isActive = true
+        label.pinToRight(view: self, margin: -10).isActive = true
+        
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.6
         
         label.textColor = UIColor.white
         
