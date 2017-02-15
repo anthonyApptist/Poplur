@@ -27,7 +27,7 @@ class HomeScreen: PoplurScreen {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.name = PoplurScreenName.home
-        self.setScreenDirections(current: self, leftScreen: nil, rightScreen: nil, downScreen: nil, middleScreen: nil, upScreen: nil)
+        self.setScreenDirections(current: self, leftScreen: nil, rightScreen: nil, downScreen: nil, middleScreen: CameraContainer(), upScreen: nil)
         self.setRemoteEnabled(leftFunc: true, rightFunc: true, downFunc: true, middleFunc: true, upFunc: true)
         self.remote.middleBtn?.animateWithNewImage(scale: 1.2, soundOn: false, image: self.remote.middleBtnArrow!)
 

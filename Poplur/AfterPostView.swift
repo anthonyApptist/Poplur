@@ -1,6 +1,6 @@
 //
 //  AfterPostView.swift
-//  PoplurDemo
+//  Poplur
 //
 //  Created by Anthony Ma on 5/11/2016.
 //  Copyright © 2016 Anthony Ma. All rights reserved.

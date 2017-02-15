@@ -191,7 +191,6 @@ class PoplurScreen: UIViewController, UITextFieldDelegate {
         }
         
      
-        
      
             
         
@@ -204,11 +203,6 @@ class PoplurScreen: UIViewController, UITextFieldDelegate {
         self.signUpVC = SignUpScreen()
         }
 
-        
-  
-
-        
-        
     }
         
 

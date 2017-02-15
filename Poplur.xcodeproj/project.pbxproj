@@ -82,14 +82,13 @@
 		668720081DE9116300696140 /* UIBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668720071DE9116300696140 /* UIBannerView.swift */; };
 		66ADCB011E05C5C6007B331D /* PoplurScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ADCB001E05C5C6007B331D /* PoplurScreenManager.swift */; };
 		66FEE8141E26D95D001C3B2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FEE8131E26D95D001C3B2F /* Main.storyboard */; };
-		66FEE8161E26DA6A001C3B2F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE8151E26DA6A001C3B2F /* CameraViewController.swift */; };
-		66FEE8181E26DA75001C3B2F /* CameraVCCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE8171E26DA75001C3B2F /* CameraVCCopy.swift */; };
 		926238C8C5D31F027D6515AA /* Pods_Poplur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D31A36889BA5C96D6F9467 /* Pods_Poplur.framework */; };
-		9298DE261DE3B25600A4598F /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298DE251DE3B25600A4598F /* CameraVC.swift */; };
-		92F4B8771DE533D500048EB2 /* AssetUploadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B8761DE533D500048EB2 /* AssetUploadingDelegate.swift */; };
+		928801381E44F82700FCF6D0 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928801371E44F82700FCF6D0 /* Video.swift */; };
+		92DDE1EB1E44357D00DDF7E8 /* PoplurCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DDE1EA1E44357D00DDF7E8 /* PoplurCameraVC.swift */; };
+		92DDE1ED1E4435A400DDF7E8 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DDE1EC1E4435A400DDF7E8 /* Camera.swift */; };
+		92E9B51A1E4D3478005DD4C5 /* CameraContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E9B5191E4D3478005DD4C5 /* CameraContainer.swift */; };
 		92F4B8791DE533E900048EB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B8781DE533E900048EB2 /* User.swift */; };
 		92F4B87B1DE533FD00048EB2 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B87A1DE533FD00048EB2 /* PreviewView.swift */; };
-		92F4B87D1DE5342100048EB2 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B87C1DE5342100048EB2 /* PhotoCaptureDelegate.swift */; };
 		92F4B87F1DE5344400048EB2 /* AfterPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B87E1DE5344400048EB2 /* AfterPostView.swift */; };
 		92FD3EB11DE531B3009341C9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD3EB01DE531B3009341C9 /* AuthService.swift */; };
 		92FD3EB31DE531C8009341C9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD3EB21DE531C8009341C9 /* DataService.swift */; };
@@ -175,13 +174,12 @@
 		668720071DE9116300696140 /* UIBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBannerView.swift; sourceTree = "<group>"; };
 		66ADCB001E05C5C6007B331D /* PoplurScreenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoplurScreenManager.swift; sourceTree = "<group>"; };
 		66FEE8131E26D95D001C3B2F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		66FEE8151E26DA6A001C3B2F /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		66FEE8171E26DA75001C3B2F /* CameraVCCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVCCopy.swift; sourceTree = "<group>"; };
-		9298DE251DE3B25600A4598F /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
-		92F4B8761DE533D500048EB2 /* AssetUploadingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetUploadingDelegate.swift; sourceTree = "<group>"; };
+		928801371E44F82700FCF6D0 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		92DDE1EA1E44357D00DDF7E8 /* PoplurCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoplurCameraVC.swift; sourceTree = "<group>"; };
+		92DDE1EC1E4435A400DDF7E8 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		92E9B5191E4D3478005DD4C5 /* CameraContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraContainer.swift; sourceTree = "<group>"; };
 		92F4B8781DE533E900048EB2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		92F4B87A1DE533FD00048EB2 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
-		92F4B87C1DE5342100048EB2 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		92F4B87E1DE5344400048EB2 /* AfterPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AfterPostView.swift; sourceTree = "<group>"; };
 		92FD3EB01DE531B3009341C9 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		92FD3EB21DE531C8009341C9 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 				666EB7B81DD812F100F67EC3 /* HomeScreen.swift */,
 				6636467B1DE26AF400E6D719 /* LogInScreen.swift */,
 				663646801DE2E6CE00E6D719 /* SignUpScreen.swift */,
-				9298DE251DE3B25600A4598F /* CameraVC.swift */,
 				66183FD31E29A1D600E984EB /* ProfileScreen.swift */,
 			);
 			name = Controller;
@@ -255,6 +252,7 @@
 			children = (
 				92FD3EB01DE531B3009341C9 /* AuthService.swift */,
 				92FD3EB21DE531C8009341C9 /* DataService.swift */,
+				928801371E44F82700FCF6D0 /* Video.swift */,
 				92F4B8781DE533E900048EB2 /* User.swift */,
 			);
 			name = Model;
@@ -302,14 +300,13 @@
 		666EB7DE1DD8518600F67EC3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				66FEE8171E26DA75001C3B2F /* CameraVCCopy.swift */,
-				66FEE8151E26DA6A001C3B2F /* CameraViewController.swift */,
+				92E9B5191E4D3478005DD4C5 /* CameraContainer.swift */,
+				92DDE1EC1E4435A400DDF7E8 /* Camera.swift */,
+				92DDE1EA1E44357D00DDF7E8 /* PoplurCameraVC.swift */,
 				92F4B87E1DE5344400048EB2 /* AfterPostView.swift */,
 				92F4B87A1DE533FD00048EB2 /* PreviewView.swift */,
-				92F4B87C1DE5342100048EB2 /* PhotoCaptureDelegate.swift */,
 				666EB7DF1DD851A000F67EC3 /* CircleButton.swift */,
 				666EB8161DD966F800F67EC3 /* UIExtensions.swift */,
-				92F4B8761DE533D500048EB2 /* AssetUploadingDelegate.swift */,
 				668720071DE9116300696140 /* UIBannerView.swift */,
 				66208E5C1E35447400913D3C /* ErrorHandler.swift */,
 				66208E5E1E3544CD00913D3C /* CustomTextFieldContainer.swift */,
@@ -582,14 +579,13 @@
 				668720081DE9116300696140 /* UIBannerView.swift in Sources */,
 				92F4B87F1DE5344400048EB2 /* AfterPostView.swift in Sources */,
 				666EB7B91DD812F100F67EC3 /* HomeScreen.swift in Sources */,
-				9298DE261DE3B25600A4598F /* CameraVC.swift in Sources */,
-				92F4B87D1DE5342100048EB2 /* PhotoCaptureDelegate.swift in Sources */,
 				666EB7E61DD94C3400F67EC3 /* PoplurRemote.swift in Sources */,
 				666EB7B71DD812F100F67EC3 /* AppDelegate.swift in Sources */,
+				92DDE1ED1E4435A400DDF7E8 /* Camera.swift in Sources */,
+				928801381E44F82700FCF6D0 /* Video.swift in Sources */,
 				663646811DE2E6CE00E6D719 /* SignUpScreen.swift in Sources */,
 				66208E5F1E3544CD00913D3C /* CustomTextFieldContainer.swift in Sources */,
 				92FD3EB31DE531C8009341C9 /* DataService.swift in Sources */,
-				66FEE8181E26DA75001C3B2F /* CameraVCCopy.swift in Sources */,
 				666EB7E01DD851A000F67EC3 /* CircleButton.swift in Sources */,
 				66ADCB011E05C5C6007B331D /* PoplurScreenManager.swift in Sources */,
 				666EB7E41DD94BA600F67EC3 /* PoplurScreen.swift in Sources */,
@@ -597,12 +593,12 @@
 				66208E5D1E35447400913D3C /* ErrorHandler.swift in Sources */,
 				92F4B87B1DE533FD00048EB2 /* PreviewView.swift in Sources */,
 				92FD3EB11DE531B3009341C9 /* AuthService.swift in Sources */,
-				92F4B8771DE533D500048EB2 /* AssetUploadingDelegate.swift in Sources */,
-				66FEE8161E26DA6A001C3B2F /* CameraViewController.swift in Sources */,
 				666EB8171DD966F800F67EC3 /* UIExtensions.swift in Sources */,
 				66208E651E35455800913D3C /* LabelCustomSpacing.swift in Sources */,
 				6636467C1DE26AF400E6D719 /* LogInScreen.swift in Sources */,
 				66208E631E35453600913D3C /* MessageView.swift in Sources */,
+				92E9B51A1E4D3478005DD4C5 /* CameraContainer.swift in Sources */,
+				92DDE1EB1E44357D00DDF7E8 /* PoplurCameraVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,6 +719,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = VDQS4882Z8;
 				INFOPLIST_FILE = Poplur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Apptist.Poplur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -739,6 +736,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = VDQS4882Z8;
 				INFOPLIST_FILE = Poplur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Apptist.Poplur;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -42,7 +42,7 @@ class AuthService {
                                             print(error!.localizedDescription)
                                         }
                                         else {
-                                            let createdUser = User.init(uid: user!.uid, email: user!.email!)
+                                            let createdUser = User.init(uid: user!.uid, email: user!.email!, name: "", city: "")
                                             print(createdUser.email)
                                             print("signed in created user")
                                             onComplete?(nil, user)
@@ -63,7 +63,7 @@ class AuthService {
                 }
             }
             else {
-                let signedInUser = User.init(uid: user!.uid, email: user!.email!)
+                let signedInUser = User.init(uid: user!.uid, email: user!.email!, name: "", city: "")
                 print(signedInUser.uid, signedInUser.email)
                 print("signed in")
                 onComplete?(nil, user)
@@ -93,7 +93,7 @@ class AuthService {
     func getSignedInUser() -> Bool {
         if let user = FIRAuth.auth()?.currentUser {
             
-            let signedInUser = User.init(uid: user.uid, email: user.email!)
+            let signedInUser = User.init(uid: user.uid, email: user.email!, name: "", city: "")
             
             print(signedInUser.uid, signedInUser.email)
             

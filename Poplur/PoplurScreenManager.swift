@@ -61,14 +61,17 @@ class PoplurScreenManager: UIViewController {
         
         switch currentVC.name {
         case .home:
-              currentVC = (storyboard?.instantiateViewController(withIdentifier: "HomeVC")) as! HomeScreen
+            currentVC = (storyboard?.instantiateViewController(withIdentifier: "HomeVC")) as! HomeScreen
         case .logIn:
-              currentVC = (storyboard?.instantiateViewController(withIdentifier: "LogInVC")) as! LogInScreen
+            currentVC = (storyboard?.instantiateViewController(withIdentifier: "LogInVC")) as! LogInScreen
         case .signUp:
-              currentVC = (storyboard?.instantiateViewController(withIdentifier: "SignUpVC")) as! SignUpScreen
+            currentVC = (storyboard?.instantiateViewController(withIdentifier: "SignUpVC")) as! SignUpScreen
         case .profile:
-              currentVC = (storyboard?.instantiateViewController(withIdentifier: "ProfileVC")) as! ProfileScreen
-        default: break
+            currentVC = (storyboard?.instantiateViewController(withIdentifier: "ProfileVC")) as! ProfileScreen
+        case .camera:
+            currentVC = CameraContainer()
+        default:
+            break
             
         }
         
@@ -92,7 +95,6 @@ class PoplurScreenManager: UIViewController {
             self.nextScreen?.currentVC = self.currentVC.downVC
             self.nextScreen?.initialSetup = false
             
-            
         } else if segue.identifier == "transitionLeft" {
             
             //currentVC.left
@@ -113,9 +115,16 @@ class PoplurScreenManager: UIViewController {
             
             //currentVC.middle
             self.nextScreen = segue.destination as? PoplurScreenManager
-            self.nextScreen?.currentVC = self.currentVC.middleVC
-            self.nextScreen?.initialSetup = false
+            if currentState == remoteStates[4] {
+                if self.currentVC.name == .camera {
+                    
+                } else {
+                    self.nextScreen?.currentVC = self.currentVC.middleVC
+                    
+                }
+            }
             
+            self.nextScreen?.initialSetup = false
         }
         
         else if segue.identifier == "transitionOther" {

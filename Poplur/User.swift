@@ -1,6 +1,6 @@
 //
 //  User.swift
-//  PoplurDemo
+//  Poplur
 //
 //  Created by Anthony Ma on 29/9/2016.
 //  Copyright © 2016 Anthony Ma. All rights reserved.
@@ -8,21 +8,17 @@
 
 import UIKit
 
-struct User {
+class User: NSObject {
     
-    private var _uid: String
-    private var _email: String
+    var uid: String
+    var email: String
+    var name: String
+    var city: String
     
-    var uid: String {
-        return _uid
-    }
-    
-    var email: String {
-        return _email
-    }
-    
-    init(uid: String, email: String) {
-        _uid = uid
-        _email = email
+    init(uid: String, email: String, name: String, city: String) {
+        self.uid = uid
+        self.email = email
+        self.name = name
+        self.city = city
     }
 }
