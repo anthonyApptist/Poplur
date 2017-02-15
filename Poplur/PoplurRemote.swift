@@ -150,7 +150,7 @@ class PoplurRemote: UIView {
         middleBtn?.turnOff()
     
         middleBtn?.isUserInteractionEnabled = true
-     //   middleBtn?.addTarget(self, action: #selector(self.middleBtnPressed(_:)), for: .touchUpInside)
+        middleBtn?.addTarget(self, action: #selector(self.middleBtnPressed(_:)), for: .touchUpInside)
    
         
         self.addSubview(middleBtn!)
