@@ -229,6 +229,24 @@
             </objects>
             <point key="canvasLocation" x="2620" y="-541"/>
         </scene>
+        <!--Camera Container-->
+        <scene sceneID="IRQ-xM-7zq">
+            <objects>
+                <viewController storyboardIdentifier="CameraVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ygz-Qi-2lT" customClass="CameraContainer" customModule="Poplur" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="glu-3X-SuD"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Cl-rh-J5o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YhR-xc-U7r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vi8-IR-i2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3449" y="-541"/>
+        </scene>
         <!--CurrentVC-->
         <scene sceneID="h9g-Z6-ZBc">
             <objects>

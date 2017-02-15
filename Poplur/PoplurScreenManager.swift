@@ -69,7 +69,8 @@ class PoplurScreenManager: UIViewController {
         case .profile:
             currentVC = (storyboard?.instantiateViewController(withIdentifier: "ProfileVC")) as! ProfileScreen
         case .camera:
-            currentVC = CameraContainer()
+            currentVC = (storyboard?.instantiateViewController(withIdentifier: "CameraVC")) as! CameraContainer
+          //  currentVC = CameraContainer()
         default:
             break
             
